@@ -40,7 +40,7 @@ async function init() {
     applyFilters();
   } catch (err) {
     grid.innerHTML = `<p style="color:#b85c38;padding:24px">
-      Could not load recipes.json — make sure the file is in the same folder.
+      Impossibile caricare recipes.json — assicurati che il file sia nella stessa cartella.
     </p>`;
     console.error(err);
   }
@@ -103,7 +103,7 @@ function renderCards() {
     card.style.animationDelay = `${i * 40}ms`;
     card.setAttribute('role', 'button');
     card.setAttribute('tabindex', '0');
-    card.setAttribute('aria-label', `Open recipe: ${recipe.name}`);
+    card.setAttribute('aria-label', `Apri ricetta: ${recipe.name}`);
 
     const imgHtml = recipe.image
       ? `<img src="${recipe.image}" alt="${recipe.name}" loading="lazy"
@@ -120,7 +120,7 @@ function renderCards() {
         <h2 class="card-title">${escHtml(recipe.name)}</h2>
         <div class="card-meta">
           ${recipe.time    ? `<span>⏱ ${recipe.time} min</span>` : ''}
-          ${recipe.servings ? `<span>👤 ${recipe.servings}</span>` : ''}
+          ${recipe.servings ? `<span>👤 ${recipe.servings} pers.</span>` : ''}
           ${recipe.difficulty ? `<span>◈ ${recipe.difficulty}</span>` : ''}
         </div>
       </div>`;
@@ -136,8 +136,8 @@ function updateCount() {
   const total = allRecipes.length;
   const shown = filtered.length;
   resultsCount.textContent = shown === total
-    ? `Showing all ${total} recipes`
-    : `Showing ${shown} of ${total} recipes`;
+    ? `Tutte le ${total} ricette`
+    : `${shown} di ${total} ricette`;
 }
 
 /* ─── MODAL ──────────────────────────────────────────────── */
@@ -173,7 +173,7 @@ function openModal(recipe) {
   // Meta
   modalMeta.innerHTML = [
     recipe.time       ? `<span>⏱ ${recipe.time} min</span>` : '',
-    recipe.servings   ? `<span>👤 Serves ${recipe.servings}</span>` : '',
+    recipe.servings   ? `<span>👤 ${recipe.servings} persone</span>` : '',
     recipe.difficulty ? `<span>◈ ${recipe.difficulty}</span>` : '',
   ].join('');
 

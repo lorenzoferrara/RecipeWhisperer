@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recipes</title>
+  <title>La Cucina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
         <span class="logo-icon">✦</span>
         <span class="logo-text">La Cucina</span>
       </div>
-      <p class="header-sub">A personal collection of recipes</p>
+      <p class="header-sub">La mia collezione personale di ricette</p>
     </div>
   </header>
 
@@ -27,33 +27,33 @@
 
     <!-- SIDEBAR FILTERS -->
     <aside class="sidebar">
-      <p class="sidebar-heading">Filters</p>
+      <p class="sidebar-heading">Filtri</p>
 
       <div class="filter-group">
-        <label for="search-input">Search</label>
+        <label for="search-input">Cerca</label>
         <input
           type="text"
           id="search-input"
-          placeholder="ingredient or name…"
+          placeholder="ingrediente o nome…"
           autocomplete="off"
         />
       </div>
 
       <div class="filter-group">
-        <label for="type-select">Type of dish</label>
+        <label for="type-select">Tipo di piatto</label>
         <select id="type-select">
-          <option value="all">All types</option>
+          <option value="all">Tutti i tipi</option>
         </select>
       </div>
 
       <div class="filter-group">
-        <label for="cuisine-select">Cuisine</label>
+        <label for="cuisine-select">Cucina</label>
         <select id="cuisine-select">
-          <option value="all">All cuisines</option>
+          <option value="all">Tutte le cucine</option>
         </select>
       </div>
 
-      <button id="clear-btn" class="clear-btn" aria-label="Clear filters">Clear filters</button>
+      <button id="clear-btn" class="clear-btn" aria-label="Azzera filtri">Azzera filtri</button>
 
       <p class="results-count" id="results-count"></p>
     </aside>
@@ -65,8 +65,8 @@
       </div>
       <div class="empty-state" id="empty-state" hidden>
         <span class="empty-icon">🍽</span>
-        <p>No recipes match your filters.</p>
-        <button onclick="clearFilters()">Clear filters</button>
+        <p>Nessuna ricetta corrisponde ai filtri selezionati.</p>
+        <button onclick="clearFilters()">Azzera filtri</button>
       </div>
     </main>
 
@@ -75,7 +75,7 @@
   <!-- MODAL -->
   <div class="modal-backdrop" id="modal-backdrop" hidden aria-modal="true" role="dialog">
     <div class="modal" id="modal">
-      <button class="modal-close" id="modal-close" aria-label="Close recipe">✕</button>
+      <button class="modal-close" id="modal-close" aria-label="Chiudi ricetta">✕</button>
       <div class="modal-image-wrap">
         <img id="modal-img" src="" alt="" />
         <div class="modal-badges" id="modal-badges"></div>
@@ -84,11 +84,11 @@
         <div class="modal-meta" id="modal-meta"></div>
         <h2 id="modal-title"></h2>
         <div class="modal-section">
-          <h3>Ingredients</h3>
+          <h3>Ingredienti</h3>
           <ul id="modal-ingredients"></ul>
         </div>
         <div class="modal-section">
-          <h3>Instructions</h3>
+          <h3>Preparazione</h3>
           <ol id="modal-instructions"></ol>
         </div>
       </div>
