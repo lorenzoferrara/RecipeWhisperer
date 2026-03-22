@@ -5,18 +5,42 @@
     "type": "Primo",
     "cuisine": "Italiana",
     "ingredients": [
-      { "name": "spaghetti", "amount": 200, "unit": "g" },
-      { "name": "uova", "amount": 3, "unit": "n" },
-      { "name": "pancetta", "amount": 100, "unit": "g" },
-      { "name": "pecorino romano", "amount": 50, "unit": "g" },
-      { "name": "pepe nero", "amount": 1, "unit": "pizzico" }
+      {
+        "name": "spaghetti",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "uova",
+        "amount": 3,
+        "unit": "n"
+      },
+      {
+        "name": "pancetta",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "pecorino romano",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "pepe nero",
+        "amount": 1,
+        "unit": "pizzico"
+      }
     ],
     "image": "images/carbonara.jpg",
     "instructions": "1. Portare a ebollizione abbondante acqua salata e cuocere gli spaghetti al dente.\n2. Rosolare la pancetta in padella finché croccante. Togliere dal fuoco.\n3. Sbattere le uova con il pecorino grattugiato e abbondante pepe nero.\n4. Scolare la pasta tenendo da parte un mestolo di acqua di cottura.\n5. Mantecare la pasta calda con la pancetta (fuori fuoco), aggiungere il composto di uova mescolando velocemente.\n6. Aggiungere l'acqua di cottura poco alla volta fino a ottenere una crema.\n7. Servire immediatamente con altro pecorino e pepe.",
     "time": 20,
     "difficulty": "Media",
     "servings": 2,
-    "tags": ["pasta", "classica", "veloce"]
+    "tags": [
+      "pasta",
+      "classica",
+      "veloce"
+    ]
   },
   {
     "id": 2,
@@ -24,20 +48,52 @@
     "type": "Contorno",
     "cuisine": "Greca",
     "ingredients": [
-      { "name": "pomodori", "amount": 300, "unit": "g" },
-      { "name": "cetriolo", "amount": 1, "unit": "n" },
-      { "name": "feta", "amount": 150, "unit": "g" },
-      { "name": "olive kalamata", "amount": 80, "unit": "g" },
-      { "name": "cipolla rossa", "amount": 0.5, "unit": "n" },
-      { "name": "olio d'oliva", "amount": 3, "unit": "cucchiai" },
-      { "name": "origano", "amount": 1, "unit": "cucchiaino" }
+      {
+        "name": "pomodori",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "cetriolo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "feta",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "olive kalamata",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "cipolla rossa",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 3,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "origano",
+        "amount": 1,
+        "unit": "cucchiaino"
+      }
     ],
     "image": "images/greek-salad.jpg",
     "instructions": "1. Tagliare pomodori e cetriolo a pezzi grossi.\n2. Affettare finemente la cipolla rossa.\n3. Unire le verdure in una ciotola con le olive.\n4. Aggiungere la feta a blocco o sbriciolata.\n5. Condire con abbondante olio d'oliva.\n6. Cospargere con origano secco e un pizzico di sale.\n7. Mescolare delicatamente e servire subito.",
     "time": 10,
     "difficulty": "Facile",
     "servings": 4,
-    "tags": ["fresca", "vegetariana", "senza cottura"]
+    "tags": [
+      "fresca",
+      "vegetariana",
+      "senza cottura"
+    ]
   },
   {
     "id": 3,
@@ -45,20 +101,52 @@
     "type": "Dolce",
     "cuisine": "Francese",
     "ingredients": [
-      { "name": "cioccolato fondente", "amount": 150, "unit": "g" },
-      { "name": "burro", "amount": 100, "unit": "g" },
-      { "name": "uova intere", "amount": 2, "unit": "n" },
-      { "name": "tuorli", "amount": 2, "unit": "n" },
-      { "name": "zucchero", "amount": 80, "unit": "g" },
-      { "name": "farina", "amount": 40, "unit": "g" },
-      { "name": "estratto di vaniglia", "amount": 1, "unit": "cucchiaino" }
+      {
+        "name": "cioccolato fondente",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "burro",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "uova intere",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "tuorli",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "zucchero",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "farina",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "estratto di vaniglia",
+        "amount": 1,
+        "unit": "cucchiaino"
+      }
     ],
     "image": "images/lava-cake.jpg",
     "instructions": "1. Preriscaldare il forno a 220°C. Imburrare gli stampini e spolverare con cacao.\n2. Sciogliere il cioccolato con il burro a bagnomaria.\n3. Sbattere uova, tuorli e zucchero fino a ottenere un composto chiaro.\n4. Incorporare il cioccolato fuso, poi la farina setacciata.\n5. Versare negli stampini e refrigerare 30 minuti (fino a 24 ore).\n6. Cuocere 12 minuti — i bordi devono essere sodi, il centro morbido.\n7. Attendere 1 minuto, capovolgere sul piatto e servire con gelato.",
     "time": 45,
     "difficulty": "Media",
     "servings": 4,
-    "tags": ["cioccolato", "dolce", "cena speciale"]
+    "tags": [
+      "cioccolato",
+      "dolce",
+      "cena speciale"
+    ]
   },
   {
     "id": 4,
@@ -66,19 +154,47 @@
     "type": "Colazione",
     "cuisine": "Moderna",
     "ingredients": [
-      { "name": "pane a lievitazione naturale", "amount": 2, "unit": "fette" },
-      { "name": "avocado", "amount": 1, "unit": "n" },
-      { "name": "limone", "amount": 0.5, "unit": "n" },
-      { "name": "peperoncino in scaglie", "amount": 1, "unit": "pizzico" },
-      { "name": "sale", "amount": 1, "unit": "pizzico" },
-      { "name": "olio d'oliva", "amount": 1, "unit": "cucchiaio" }
+      {
+        "name": "pane a lievitazione naturale",
+        "amount": 2,
+        "unit": "fette"
+      },
+      {
+        "name": "avocado",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "limone",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "peperoncino in scaglie",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "cucchiaio"
+      }
     ],
     "image": "images/avocado-toast.jpg",
     "instructions": "1. Tostare le fette di pane finché dorate e croccanti.\n2. Aprire gli avocado, eliminare il nocciolo e raccogliere la polpa in una ciotola.\n3. Schiacciare con una forchetta; aggiungere succo di limone, sale e olio d'oliva.\n4. Spalmare generosamente sul pane tostato.\n5. Completare con scaglie di peperoncino e un filo d'olio.\n6. Facoltativo: aggiungere un uovo in camicia, salmone affumicato o germogli.",
     "time": 10,
     "difficulty": "Facile",
     "servings": 2,
-    "tags": ["vegetariano", "veloce", "sano"]
+    "tags": [
+      "vegetariano",
+      "veloce",
+      "sano"
+    ]
   },
   {
     "id": 5,
@@ -86,25 +202,77 @@
     "type": "Secondo",
     "cuisine": "Indiana",
     "ingredients": [
-      { "name": "petto di pollo", "amount": 600, "unit": "g" },
-      { "name": "yogurt intero", "amount": 150, "unit": "ml" },
-      { "name": "pomodori pelati", "amount": 400, "unit": "g" },
-      { "name": "panna fresca", "amount": 100, "unit": "ml" },
-      { "name": "cipolla", "amount": 1, "unit": "n" },
-      { "name": "aglio", "amount": 3, "unit": "spicchi" },
-      { "name": "zenzero fresco", "amount": 2, "unit": "cm" },
-      { "name": "garam masala", "amount": 2, "unit": "cucchiaini" },
-      { "name": "cumino", "amount": 1, "unit": "cucchiaino" },
-      { "name": "coriandolo in polvere", "amount": 1, "unit": "cucchiaino" },
-      { "name": "curcuma", "amount": 0.5, "unit": "cucchiaino" },
-      { "name": "peperoncino in polvere", "amount": 0.5, "unit": "cucchiaino" }
+      {
+        "name": "petto di pollo",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "yogurt intero",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "name": "pomodori pelati",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "panna fresca",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "cipolla",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "aglio",
+        "amount": 3,
+        "unit": "spicchi"
+      },
+      {
+        "name": "zenzero fresco",
+        "amount": 2,
+        "unit": "cm"
+      },
+      {
+        "name": "garam masala",
+        "amount": 2,
+        "unit": "cucchiaini"
+      },
+      {
+        "name": "cumino",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "coriandolo in polvere",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "curcuma",
+        "amount": 0.5,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "peperoncino in polvere",
+        "amount": 0.5,
+        "unit": "cucchiaino"
+      }
     ],
     "image": "images/tikka-masala.jpg",
     "instructions": "1. Marinare il pollo con yogurt, limone e spezie per almeno 1 ora.\n2. Grigliare o rosolare il pollo fino a doratura. Mettere da parte.\n3. Soffriggere cipolla, aglio e zenzero fino a doratura.\n4. Aggiungere pomodori e spezie; cuocere a fuoco lento 15 minuti.\n5. Frullare la salsa fino a renderla liscia, rimetterla in padella.\n6. Unire il pollo e la panna; cuocere 10 minuti.\n7. Guarnire con coriandolo fresco e servire con riso o naan.",
     "time": 60,
     "difficulty": "Media",
     "servings": 4,
-    "tags": ["speziato", "curry", "meal prep"]
+    "tags": [
+      "speziato",
+      "curry",
+      "meal prep"
+    ]
   },
   {
     "id": 6,
@@ -112,20 +280,109 @@
     "type": "Contorno",
     "cuisine": "Italiana",
     "ingredients": [
-      { "name": "pane raffermo", "amount": 200, "unit": "g" },
-      { "name": "pomodori maturi", "amount": 400, "unit": "g" },
-      { "name": "cetriolo", "amount": 1, "unit": "n" },
-      { "name": "cipolla rossa", "amount": 0.5, "unit": "n" },
-      { "name": "basilico fresco", "amount": 10, "unit": "foglie" },
-      { "name": "capperi", "amount": 2, "unit": "cucchiai" },
-      { "name": "aceto di vino rosso", "amount": 2, "unit": "cucchiai" },
-      { "name": "olio d'oliva", "amount": 4, "unit": "cucchiai" }
+      {
+        "name": "pane raffermo",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "pomodori maturi",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "cetriolo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla rossa",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "basilico fresco",
+        "amount": 10,
+        "unit": "foglie"
+      },
+      {
+        "name": "capperi",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "aceto di vino rosso",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 4,
+        "unit": "cucchiai"
+      }
     ],
     "image": "images/panzanella.jpg",
     "instructions": "1. Spezzare il pane a pezzi; tostarlo leggermente o lasciarlo raffermo una notte.\n2. Ammollare il pane in acqua per 10 minuti, poi strizzarlo bene.\n3. Tagliare pomodori e cetriolo; affettare finemente la cipolla.\n4. Unire tutte le verdure con i capperi e il pane.\n5. Condire con aceto di vino rosso e abbondante olio d'oliva.\n6. Aggiungere il basilico spezzato. Regolare di sale.\n7. Lasciare riposare 30 minuti prima di servire — il sapore migliora.",
     "time": 20,
     "difficulty": "Facile",
     "servings": 4,
-    "tags": ["vegetariana", "estiva", "italiana"]
+    "tags": [
+      "vegetariana",
+      "estiva",
+      "italiana"
+    ]
+  },
+  {
+    "name": "Pasta al pomodoro con aglio e cipolla",
+    "type": "Primo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "amount": 320,
+        "unit": "g"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Aglio",
+        "amount": 2,
+        "unit": "spicchi"
+      },
+      {
+        "name": "Cipolla",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Olio extra vergine d'oliva",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Basilico fresco",
+        "amount": 4,
+        "unit": "foglie"
+      }
+    ],
+    "instructions": "1. Tritare finemente la cipolla e l'aglio. In una padella capiente, scaldare l'olio d'oliva a fuoco medio. Aggiungere la cipolla e l'aglio tritati e soffriggere per 5-7 minuti, finché non saranno morbidi e trasparenti.\n2. Aggiungere la passata di pomodoro, un pizzico di sale e mescolare bene. Portare a ebollizione, poi ridurre la fiamma al minimo, coprire e lasciare sobbollire per almeno 20 minuti, mescolando occasionalmente.\n3. Nel frattempo, portare a ebollizione abbondante acqua salata in una pentola grande. Cuocere la pasta secondo le istruzioni sulla confezione fino a quando sarà al dente.\n4. Scolare la pasta, conservando un mestolino di acqua di cottura. Trasferire la pasta direttamente nella padella con il sugo di pomodoro.\n5. Aggiungere qualche foglia di basilico fresco e, se necessario, un po' dell'acqua di cottura della pasta per amalgamare bene il tutto. Saltare la pasta nel sugo per un minuto.\n6. Servire immediatamente.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Pasta",
+      "Pomodoro",
+      "Vegetariano"
+    ],
+    "image": "",
+    "id": 7
   }
 ]
