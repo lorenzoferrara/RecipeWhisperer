@@ -140,7 +140,45 @@ function updateCount() {
     : `${shown} di ${total} ricette`;
 }
 
-/* ─── MODAL ──────────────────────────────────────────────── */
+/* ─── FORMAT QUANTITY ────────────────────────────────────── */
+function formatQty(amount, unit) {
+  // Format number: remove trailing .0 but keep .5 etc.
+  const num = Number(amount) % 1 === 0 ? String(Math.floor(amount)) : String(amount);
+
+  const unitMap = {
+    'n':          '',          // bare number, no unit label
+    'g':          'g',
+    'kg':         'kg',
+    'ml':         'ml',
+    'l':          'l',
+    'pizzico':    'pizzico',
+    'cucchiaio':  'cucchiaio',
+    'cucchiai':   'cucchiai',
+    'cucchiaino': 'cucchiaino',
+    'cucchiaini': 'cucchiaini',
+    'fette':      'fetta',
+    'foglie':     'foglia',
+    'spicchi':    'spicchio',
+    'cm':         'cm',
+  };
+
+  const label = unitMap[unit] ?? unit;
+
+  // Pluralise a handful of irregular Italian units
+  const plurals = {
+    'cucchiaio': 'cucchiai',
+    'cucchiaino': 'cucchiaini',
+    'fetta': 'fette',
+    'foglia': 'foglie',
+    'spicchio': 'spicchi',
+    'pizzico': 'pizzichi',
+  };
+  const finalLabel = (Number(amount) > 1 && plurals[label]) ? plurals[label] : label;
+
+  return finalLabel ? `${num} ${finalLabel}` : num;
+}
+
+
 function openModal(recipe) {
   // Image or emoji placeholder
   if (recipe.image) {
@@ -181,8 +219,16 @@ function openModal(recipe) {
   modalTitle.textContent = recipe.name;
 
   // Ingredients
-  modalIngredients.innerHTML = recipe.ingredients
-    .map(i => `<li>${escHtml(i)}</li>`).join('');
+  modalIngredients.innerHTML = recipe.ingredients.map(ing => {
+    if (typeof ing === 'string') {
+      return `<li><span class="ing-name">${escHtml(ing)}</span></li>`;
+    }
+    const qty = formatQty(ing.amount, ing.unit);
+    return `<li>
+      <span class="ing-qty">${escHtml(qty)}</span>
+      <span class="ing-name">${escHtml(ing.name)}</span>
+    </li>`;
+  }).join('');
 
   // Instructions — support both plain text (newline-separated) and arrays
   const steps = Array.isArray(recipe.instructions)

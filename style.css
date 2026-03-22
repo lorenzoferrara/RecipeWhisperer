@@ -388,15 +388,27 @@ main {
 }
 #modal-ingredients {
   display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
+  flex-direction: column;
+  gap: 0;
 }
 #modal-ingredients li {
-  background: var(--paper);
-  border: 1px solid rgba(30,26,20,.1);
-  border-radius: 20px;
-  padding: 4px 13px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(30,26,20,.07);
+  font-size: .9rem;
+}
+#modal-ingredients li:last-child { border-bottom: none; }
+.ing-qty {
+  min-width: 80px;
+  font-weight: 500;
+  color: var(--terracotta);
   font-size: .85rem;
+  flex-shrink: 0;
+  text-align: right;
+}
+.ing-name {
   color: var(--ink-mid);
   text-transform: capitalize;
 }
