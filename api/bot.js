@@ -115,6 +115,7 @@ Il JSON deve avere esattamente questa struttura:
 
 Unità di misura valide per "unit": g, kg, ml, l, n, pizzico, cucchiaio, cucchiai, cucchiaino, cucchiaini, fette, foglie, spicchi, cm.
 Usa "n" per elementi contabili senza unità (es. 2 uova → amount: 2, unit: "n").
+Non usare mai amount: 0. Se una quantità non è numerica (es. sale, pepe, olio), usa amount: 1 e unit: "pizzico".
 Il campo "image" lascialo sempre stringa vuota "".
 Tutti i testi devono essere in italiano.
 
@@ -149,10 +150,34 @@ ${recipeText}
   const cleaned = raw.replace(/```json|```/g, '').trim();
 
   try {
-    return JSON.parse(cleaned);
+    const parsed = JSON.parse(cleaned);
+    return normalizeRecipe(parsed);
   } catch {
     throw new Error(`Gemini ha restituito JSON non valido:\n${cleaned}`);
   }
+}
+
+function normalizeRecipe(recipe) {
+  if (!recipe || !Array.isArray(recipe.ingredients)) return recipe;
+
+  recipe.ingredients = recipe.ingredients.map((ing) => {
+    if (typeof ing.amount !== 'number' || ing.amount !== 0) {
+      return ing;
+    }
+
+    const name = (ing.name || '').toLowerCase();
+    if (name.includes('sale') || name.includes('pepe') || name.includes('olio')) {
+      return { ...ing, amount: 1, unit: 'pizzico' };
+    }
+
+    if (ing.unit === 'n') {
+      return { ...ing, amount: 1, unit: 'n' };
+    }
+
+    return { ...ing, amount: 1, unit: 'pizzico' };
+  });
+
+  return recipe;
 }
 
 // ─── GITHUB API ───────────────────────────────────────────────
