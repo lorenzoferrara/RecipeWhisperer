@@ -1155,5 +1155,84 @@
     ],
     "image": "",
     "id": 19
+  },
+  {
+    "name": "Vellutata di cavolfiore e gamberetti",
+    "type": "Zuppa",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "champignon",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "name": "cavolfiore",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "gamberetti sgusciati",
+        "amount": 160,
+        "unit": "g"
+      },
+      {
+        "name": "scalogno",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "brodo vegetale leggero",
+        "amount": 450,
+        "unit": "ml"
+      },
+      {
+        "name": "panna fresca",
+        "amount": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "vino bianco secco",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "olio extravergine d’oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe bianco",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "timo",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "scorza di limone",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Affetta finemente lo scalogno e fallo stufare dolcemente con 1-2 cucchiai di olio, senza farlo colorare.\n2. Aggiungi i funghi affettati e un pizzico di sale. Cuoci finché tutta l'acqua evapora (8-10 minuti), i funghi devono risultare concentrati.\n3. Aggiungi il cavolfiore a pezzi piccoli. Sfuma con il vino bianco.\n4. Versa il brodo caldo e cuoci per 15 minuti coperto, finché il cavolfiore è morbido.\n5. Frulla molto finemente il composto. Aggiungi la panna e mescola bene a fuoco basso. Se la crema è troppo liquida, fai ridurre per 2-3 minuti senza coperchio.\n6. Asciuga bene i gamberetti. Scalda una padella molto calda con un filo d’olio. Cuoci i gamberetti per 45-60 secondi per lato. Sala solo alla fine.\n7. Impiatta la vellutata nel piatto, disponi i gamberetti sopra. Completa con pochissimo timo, scorza di limone e un filo d’olio a crudo.",
+    "time": 45,
+    "difficulty": "Facile",
+    "servings": 2,
+    "tags": [
+      "Vellutata",
+      "Cavolfiore",
+      "Gamberetti",
+      "Zuppa"
+    ],
+    "image": "",
+    "id": 20
   }
 ]
