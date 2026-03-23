@@ -384,5 +384,59 @@
     ],
     "image": "",
     "id": 7
+  },
+  {
+    "name": "Pollo al Lime e Riso Venere",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Petto di pollo a cubetti",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Riso Venere integrale",
+        "amount": 320,
+        "unit": "g"
+      },
+      {
+        "name": "Zucchine a rondelle",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "Piselli",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Lime",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Curcuma",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Yogurt greco 0%",
+        "amount": 250,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Lessa il riso: Cuoci il riso venere in acqua salata per 30-35 min. Scola e tieni da parte.\n2. Prepara il pollo: Marina il pollo con succo di lime e un pizzico di curcuma.\n3. Salta le verdure: In una padella con un filo d'olio, scotta le zucchine e i piselli per 6-7 min (devono restare sodi). Rimuovi dalla padella.\n4. Cottura finale: Nella stessa padella, cuoci il pollo a fiamma viva. Una volta cotto, abbassa il fuoco al minimo e aggiungi lo yogurt greco mescolando per creare una salsa vellutata.\n5. Impiatta: Crea una base di riso, aggiungi le verdure e copri con il pollo cremoso.",
+    "time": 45,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Fresco",
+      "Agrumato",
+      "Proteico",
+      "Sano"
+    ],
+    "image": "",
+    "id": 8
   }
 ]
