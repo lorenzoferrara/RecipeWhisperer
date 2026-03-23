@@ -963,5 +963,69 @@
     ],
     "image": "",
     "id": 16
+  },
+  {
+    "name": "Salmone con Burro alle Erbe e Aglio + Fagiolini Croccanti",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "filetti di salmone",
+        "amount": 4,
+        "unit": "n"
+      },
+      {
+        "name": "fagiolini verdi lunghi surgelati",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "burro",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "aglio",
+        "amount": 2,
+        "unit": "spicchi"
+      },
+      {
+        "name": "erbe fresche (prezzemolo o aneto)",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "limone",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Rosolare i fagiolini verdi surgelati in una padella con olio a fuoco vivo finché non saranno leggermente bruciacchiati; salare e mettere da parte.\n2. Nella stessa padella, sciogliere il burro con l'aglio; aggiungere il salmone con la pelle rivolta verso il basso.\n3. Cuocere 3-4 minuti per lato; condire con sale e pepe.\n4. Aggiungere le erbe e una spremuta di limone e versare il burro sul salmone; servire con i fagiolini verdi.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Salmone",
+      "Fagiolini",
+      "Pesce",
+      "Sano"
+    ],
+    "image": "",
+    "id": 17
   }
 ]
