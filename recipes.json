@@ -438,5 +438,70 @@
     ],
     "image": "",
     "id": 8
+  },
+  {
+    "name": "Salmone in Crosta di Erbe e Asparagi (Low Carb)",
+    "type": "Secondo",
+    "cuisine": "Mediterranea",
+    "ingredients": [
+      {
+        "name": "Filetto di salmone",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Asparagi",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Pomodorini",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Mandorle a lamelle",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Mix Erbe di Provenza",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Limone",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Olio d'oliva",
+        "amount": 10,
+        "unit": "ml"
+      }
+    ],
+    "instructions": "1. Rimuovi la base dura degli asparagi. Disponili su una teglia con i pomodorini tagliati a metà. Condisci con sale, pepe e un filo d'olio.\n2. In una ciotolina mescola le mandorle tritate grossolanamente, le erbe e la scorza di limone.\n3. Adagia il salmone sopra le verdure. Premi il mix di mandorle e erbe sulla parte superiore del pesce.\n4. Inforna a 200°C per 12-15 min. Il salmone deve risultare succoso.\n5. Spremi il succo di limone fresco sulle verdure prima di servire.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Low Carb",
+      "Mediterranea",
+      "Cena No-Carbo",
+      "Pesce",
+      "Salmone"
+    ],
+    "image": "",
+    "id": 9
   }
 ]
