@@ -1,7 +1,7 @@
 // api/bot.js — Vercel Serverless Function
 // Telegram webhook → Gemini → conferma con bottoni → commit GitHub
 
-import { kv } from '@vercel/kv';
+import Redis from 'ioredis';
 
 const TELEGRAM_TOKEN  = process.env.TELEGRAM_TOKEN;
 const GEMINI_API_KEY  = process.env.GEMINI_API_KEY;
@@ -9,7 +9,19 @@ const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const GITHUB_REPO     = process.env.GITHUB_REPO;
 const ALLOWED_CHAT_ID = process.env.ALLOWED_CHAT_ID;
 
-const KV_TTL = 600; // secondi — la ricetta scade dopo 10 minuti se non confermata
+const KV_TTL = 600; // secondi — la ricetta scade dopo 10 minuti
+
+// Redis client — riutilizzato tra invocazioni warm
+let redis;
+function getRedis() {
+  if (!redis) {
+    redis = new Redis(process.env.REDIS_URL, {
+      tls: { rejectUnauthorized: false }, // richiesto da Vercel Redis
+      maxRetriesPerRequest: 3,
+    });
+  }
+  return redis;
+}
 
 // ─── ENTRY POINT ─────────────────────────────────────────────
 export default async function handler(req, res) {
@@ -56,10 +68,10 @@ export default async function handler(req, res) {
 
     const recipe = await structureWithGemini(text);
 
-    // Salva la ricetta in KV con chiave recipe:<chatId>, scade in 10 min
-    await kv.set(`recipe:${chatId}`, JSON.stringify(recipe), { ex: KV_TTL });
+    // Salva la ricetta in Redis con TTL di 10 minuti
+    const db = getRedis();
+    await db.set(`recipe:${chatId}`, JSON.stringify(recipe), 'EX', KV_TTL);
 
-    // Manda il riepilogo leggibile con i bottoni
     await sendMessageWithButtons(
       chatId,
       `📋 *Riepilogo ricetta*\n\n${buildPreview(recipe)}\n\nAggiungo questa ricetta al sito?`,
@@ -88,8 +100,10 @@ async function handleCallback(cb) {
 
   await answerCallback(cb.id);
 
+  const db = getRedis();
+
   if (action === 'cancel') {
-    await kv.del(`recipe:${chatId}`);
+    await db.del(`recipe:${chatId}`);
     await editText(chatId, msgId, '❌ Ricetta annullata.');
     return;
   }
@@ -97,16 +111,14 @@ async function handleCallback(cb) {
   if (action === 'confirm') {
     await editText(chatId, msgId, '⏳ Sto salvando sul sito...');
 
-    // Recupera la ricetta da KV
-    const raw = await kv.get(`recipe:${chatId}`);
+    const raw = await db.get(`recipe:${chatId}`);
     if (!raw) {
       await editText(chatId, msgId, '❌ Ricetta scaduta (10 min). Rimandala da capo.');
       return;
     }
 
-    const recipe = typeof raw === 'string' ? JSON.parse(raw) : raw;
+    const recipe = JSON.parse(raw);
 
-    // Leggi recipes.json da GitHub, aggiungi la nuova ricetta, committa
     const { content, sha } = await githubGet('recipes.json');
     const recipes = JSON.parse(content);
     recipe.id = recipes.length > 0 ? Math.max(...recipes.map(r => r.id)) + 1 : 1;
@@ -119,8 +131,7 @@ async function handleCallback(cb) {
       `🍽 Aggiungi ricetta: ${recipe.name}`
     );
 
-    // Pulisci KV
-    await kv.del(`recipe:${chatId}`);
+    await db.del(`recipe:${chatId}`);
 
     await editText(chatId, msgId,
       `✅ *${recipe.name}* aggiunta!\n\n_Il sito si aggiornerà in circa 1 minuto._`
