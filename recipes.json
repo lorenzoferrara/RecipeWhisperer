@@ -1091,5 +1091,69 @@
     ],
     "image": "",
     "id": 18
+  },
+  {
+    "name": "Torta allo yogurt bianco (con 1 uovo)",
+    "type": "Dolce",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "yogurt bianco",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "uovo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "farina 00",
+        "amount": 180,
+        "unit": "g"
+      },
+      {
+        "name": "zucchero",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "olio di semi",
+        "amount": 80,
+        "unit": "ml"
+      },
+      {
+        "name": "lievito per dolci",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "vaniglia o scorza di limone",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "latte",
+        "amount": 60,
+        "unit": "ml"
+      }
+    ],
+    "instructions": "1. Monta leggermente l'uovo con lo zucchero per 2-3 minuti con una frusta, finché non diventa più chiaro e leggermente spumoso.\n2. Aggiungi lo yogurt, l'olio e gli aromi (vaniglia o scorza di limone) e mescola fino ad ottenere un'emulsione omogenea.\n3. Incorpora gradualmente gli ingredienti secchi setacciati: farina, lievito e sale.\n4. Regola la consistenza dell'impasto con il latte, fino ad ottenere un composto cremoso, simile a uno yogurt denso.\n5. Cuoci in forno statico a 180°C per 35-40 minuti. Fai la prova stecchino al centro per verificare la cottura.",
+    "time": 45,
+    "difficulty": "Facile",
+    "servings": 8,
+    "tags": [
+      "Dolce",
+      "Yogurt",
+      "Torta",
+      "Facile"
+    ],
+    "image": "",
+    "id": 19
   }
 ]
