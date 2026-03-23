@@ -1027,5 +1027,69 @@
     ],
     "image": "",
     "id": 17
+  },
+  {
+    "name": "Pasta alla Norma",
+    "type": "Primo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "pasta",
+        "amount": 375,
+        "unit": "g"
+      },
+      {
+        "name": "melanzana",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "passata di pomodoro",
+        "amount": 275,
+        "unit": "g"
+      },
+      {
+        "name": "aglio",
+        "amount": 2,
+        "unit": "spicchi"
+      },
+      {
+        "name": "ricotta salata",
+        "amount": 90,
+        "unit": "g"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "basilico",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Salare i cubetti di melanzana per 10 minuti, sciacquare e friggere in padella con olio d'oliva fino a doratura.\n2. Aggiungere l'aglio e la passata; cuocere a fuoco lento per 10-12 minuti; salare e pepare a piacere.\n3. Cuocere la pasta al dente; riservare mezza tazza di acqua di cottura della pasta.\n4. Saltare la pasta con la salsa e un po' di acqua di cottura della pasta; guarnire con ricotta salata e basilico.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Pasta",
+      "Melanzane",
+      "Ricotta Salata",
+      "Vegetariano"
+    ],
+    "image": "",
+    "id": 18
   }
 ]
