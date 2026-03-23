@@ -632,5 +632,55 @@
     ],
     "image": "",
     "id": 11
+  },
+  {
+    "name": "Tacchino alla Paprika e Taboulé di Farro",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Fesa di tacchino a straccetti",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Farro integrale",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Pomodori",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Cetriolo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Cipollotto",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Tahina (crema di sesamo)",
+        "amount": 20,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Bolli il farro in acqua salata per 20-25 min. Scola e lascia intiepidire.\n2. Taglia pomodori, cetriolo e cipollotto a cubetti minuscoli. Unisci al farro con tantissimo prezzemolo e menta tritati. Condisci con limone e olio.\n3. Condisci il tacchino con la paprika affumicata. Saltalo in padella a fuoco vivo per 6 min fino a doratura completa.\n4. Diluisci la tahina con succo di limone e un goccio d'acqua fino a ottenere una salsa fluida.\n5. Disponi il tacchino sopra il taboulé di farro e versa la salsa tahina a filo.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Fresco",
+      "Proteico",
+      "Tacchino",
+      "Farro",
+      "Taboulé"
+    ],
+    "image": "",
+    "id": 12
   }
 ]
