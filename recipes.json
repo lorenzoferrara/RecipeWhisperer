@@ -574,5 +574,63 @@
     ],
     "image": "",
     "id": 10
+  },
+  {
+    "name": "Tempeh al Miso e \"Cloud Scramble\" di Albumi (Low Carb)",
+    "type": "Secondo",
+    "cuisine": "Asiatica",
+    "ingredients": [
+      {
+        "name": "Tempeh",
+        "amount": 700,
+        "unit": "g"
+      },
+      {
+        "name": "Albume d'uovo",
+        "amount": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "Broccoli",
+        "amount": 1,
+        "unit": "kg"
+      },
+      {
+        "name": "Funghi Champignon",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Pasta di Miso",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Salsa di Soia",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Olio di sesamo",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Pepe bianco",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Spennella il tempeh con un mix di salsa di soia (o pasta di miso sciolta in poca acqua).\n2. Salta i broccoli e i funghi a fiamma alta con un filo d'olio di sesamo finché non sono dorati (circa 8 min).\n3. In una padella antiaderente, griglia il tempeh finché non diventa molto croccante all'esterno.\n4. Cuoci gli albumi in padella con un pizzico di pepe bianco, strapazzandoli velocemente per mantenerli spumosi.\n5. Servi il tempeh croccante sopra le verdure saltate, accompagnato dagli albumi \"cloud\".",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Low Carb",
+      "Umami",
+      "Senza Carboidrati"
+    ],
+    "image": "",
+    "id": 11
   }
 ]
