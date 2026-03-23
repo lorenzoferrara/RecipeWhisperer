@@ -1,11 +1,15 @@
 // api/bot.js — Vercel Serverless Function
 // Telegram webhook → Gemini → conferma con bottoni → commit GitHub
 
+import { kv } from '@vercel/kv';
+
 const TELEGRAM_TOKEN  = process.env.TELEGRAM_TOKEN;
 const GEMINI_API_KEY  = process.env.GEMINI_API_KEY;
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const GITHUB_REPO     = process.env.GITHUB_REPO;
 const ALLOWED_CHAT_ID = process.env.ALLOWED_CHAT_ID;
+
+const KV_TTL = 600; // secondi — la ricetta scade dopo 10 minuti se non confermata
 
 // ─── ENTRY POINT ─────────────────────────────────────────────
 export default async function handler(req, res) {
@@ -16,13 +20,11 @@ export default async function handler(req, res) {
   try {
     const body = req.body;
 
-    // Bottone premuto
     if (body.callback_query) {
       await handleCallback(body.callback_query);
       return res.status(200).end();
     }
 
-    // Messaggio normale
     const { message } = body;
     if (!message) return res.status(200).end();
 
@@ -52,18 +54,20 @@ export default async function handler(req, res) {
 
     await sendMessage(chatId, '⏳ Sto elaborando la ricetta con Gemini...');
 
-    const recipe  = await structureWithGemini(text);
-    const preview = buildPreview(recipe);
+    const recipe = await structureWithGemini(text);
 
-    // Encodiamo il JSON in base64 e lo nascondiamo nel testo del messaggio
-    // tra delimitatori |||...|||  così lo recuperiamo al click del bottone
-    const encoded  = Buffer.from(JSON.stringify(recipe)).toString('base64');
-    const fullText = `📋 *Riepilogo ricetta*\n\n${preview}\n\nAggiungo questa ricetta al sito?\n|||${encoded}|||`;
+    // Salva la ricetta in KV con chiave recipe:<chatId>, scade in 10 min
+    await kv.set(`recipe:${chatId}`, JSON.stringify(recipe), { ex: KV_TTL });
 
-    await sendMessageWithButtons(chatId, fullText, [[
-      { text: '✅ Sì, aggiungi', callback_data: 'confirm' },
-      { text: '❌ No, annulla',  callback_data: 'cancel'  },
-    ]]);
+    // Manda il riepilogo leggibile con i bottoni
+    await sendMessageWithButtons(
+      chatId,
+      `📋 *Riepilogo ricetta*\n\n${buildPreview(recipe)}\n\nAggiungo questa ricetta al sito?`,
+      [[
+        { text: '✅ Sì, aggiungi', callback_data: 'confirm' },
+        { text: '❌ No, annulla',  callback_data: 'cancel'  },
+      ]]
+    );
 
   } catch (err) {
     console.error(err);
@@ -85,6 +89,7 @@ async function handleCallback(cb) {
   await answerCallback(cb.id);
 
   if (action === 'cancel') {
+    await kv.del(`recipe:${chatId}`);
     await editText(chatId, msgId, '❌ Ricetta annullata.');
     return;
   }
@@ -92,24 +97,16 @@ async function handleCallback(cb) {
   if (action === 'confirm') {
     await editText(chatId, msgId, '⏳ Sto salvando sul sito...');
 
-    // Estraiamo il JSON encodato dal testo del messaggio
-    const msgText = cb.message.text || '';
-    const match   = msgText.match(/\|\|\|(.+?)\|\|\|/s);
-
-    if (!match) {
-      await editText(chatId, msgId, '❌ Impossibile recuperare la ricetta. Riprova da capo.');
+    // Recupera la ricetta da KV
+    const raw = await kv.get(`recipe:${chatId}`);
+    if (!raw) {
+      await editText(chatId, msgId, '❌ Ricetta scaduta (10 min). Rimandala da capo.');
       return;
     }
 
-    let recipe;
-    try {
-      recipe = JSON.parse(Buffer.from(match[1], 'base64').toString('utf8'));
-    } catch {
-      await editText(chatId, msgId, '❌ Errore nel parsing della ricetta. Riprova da capo.');
-      return;
-    }
+    const recipe = typeof raw === 'string' ? JSON.parse(raw) : raw;
 
-    // Leggi recipes.json da GitHub, aggiungi, committa
+    // Leggi recipes.json da GitHub, aggiungi la nuova ricetta, committa
     const { content, sha } = await githubGet('recipes.json');
     const recipes = JSON.parse(content);
     recipe.id = recipes.length > 0 ? Math.max(...recipes.map(r => r.id)) + 1 : 1;
@@ -121,6 +118,9 @@ async function handleCallback(cb) {
       sha,
       `🍽 Aggiungi ricetta: ${recipe.name}`
     );
+
+    // Pulisci KV
+    await kv.del(`recipe:${chatId}`);
 
     await editText(chatId, msgId,
       `✅ *${recipe.name}* aggiunta!\n\n_Il sito si aggiornerà in circa 1 minuto._`
@@ -184,10 +184,7 @@ ${recipeText}
     'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
     {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-goog-api-key': GEMINI_API_KEY,
-      },
+      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_API_KEY },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
         generationConfig: { temperature: 0.1 }
@@ -196,16 +193,12 @@ ${recipeText}
   );
 
   if (!res.ok) throw new Error(`Gemini error: ${await res.text()}`);
-
   const data    = await res.json();
   const raw     = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
   const cleaned = raw.replace(/```json|```/g, '').trim();
 
-  try {
-    return JSON.parse(cleaned);
-  } catch {
-    throw new Error(`Gemini ha restituito JSON non valido:\n${cleaned}`);
-  }
+  try { return JSON.parse(cleaned); }
+  catch { throw new Error(`JSON non valido da Gemini:\n${cleaned}`); }
 }
 
 // ─── GITHUB ───────────────────────────────────────────────────
@@ -216,10 +209,7 @@ async function githubGet(path) {
   );
   if (!res.ok) throw new Error(`GitHub GET error: ${res.status}`);
   const data = await res.json();
-  return {
-    content: Buffer.from(data.content, 'base64').toString('utf8'),
-    sha: data.sha
-  };
+  return { content: Buffer.from(data.content, 'base64').toString('utf8'), sha: data.sha };
 }
 
 async function githubCommit(path, content, sha, message) {
@@ -253,9 +243,7 @@ async function sendMessageWithButtons(chatId, text, buttons) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      chat_id: chatId,
-      text,
-      parse_mode: 'Markdown',
+      chat_id: chatId, text, parse_mode: 'Markdown',
       reply_markup: { inline_keyboard: buttons }
     })
   });
