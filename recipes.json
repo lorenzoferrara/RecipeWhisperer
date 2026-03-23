@@ -682,5 +682,85 @@
     ],
     "image": "",
     "id": 12
+  },
+  {
+    "name": "Anatra in umido al vino rosso",
+    "type": "Secondo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "cosce d'anatra",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "carota",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "costa di sedano",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "aglio",
+        "amount": 1,
+        "unit": "spicchi"
+      },
+      {
+        "name": "vino rosso corposo",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "alloro",
+        "amount": 1,
+        "unit": "foglie"
+      },
+      {
+        "name": "rosmarino o timo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "olio EVO",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "brodo o acqua calda",
+        "amount": 100,
+        "unit": "ml"
+      }
+    ],
+    "instructions": "1. Preparazione degli aromi: Tritare cipolla, carota, sedano. Schiacciare leggermente l’aglio. Tenere da parte.\n2. Rosolatura delle cosce: In una padella larga e scoperta, imposta l'induzione a livello 6–7. Metti le cosce con la pelle verso il basso senza olio. Cuoci per 15–20 minuti senza muovere, finché la pelle diventa dorata e rilascia grasso. Gira le cosce e fai dorare l’altro lato per 5 minuti. Togli le cosce e mettile da parte.\n3. Soffritto: Usa il grasso rimasto nella padella. Imposta l'induzione a livello 4–5. Aggiungi cipolla, carota, sedano e cuoci per 8–10 minuti finché diventano morbidi, non bruciati. Aggiungi l'aglio negli ultimi 2 minuti.\n4. Sfumatura col vino: Rimetti le cosce in padella. Versa il vino rosso. Imposta l'induzione a livello 6. Lascia bollire per 5–7 minuti fino a che l’alcol evapora e il vino si riduce leggermente.\n5. Cottura lenta dell’umido: Aggiungi alloro e rosmarino. Copri con un coperchio. Abbassa l'induzione a livello 2–3. Cuoci per 1 ora e 45 minuti – 2 ore e 15 minuti, controllando ogni tanto. Se asciuga troppo, aggiungi poco brodo caldo o acqua.\n6. Finitura: Togli le cosce. Alza l'induzione a livello 5–6. Riduci il fondo di cottura fino a ottenere una salsa densa. Rimetti le cosce dentro, aggiusta di sale e pepe.\n7. Servizio: Servi con polenta, purè o patate arrosto. Il sugo denso è essenziale: versalo abbondante sopra la carne.",
+    "time": 150,
+    "difficulty": "Media",
+    "servings": 2,
+    "tags": [
+      "Anatra",
+      "Umido",
+      "Vino rosso",
+      "Secondo piatto",
+      "Induzione"
+    ],
+    "image": "",
+    "id": 13
   }
 ]
