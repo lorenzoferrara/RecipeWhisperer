@@ -762,5 +762,76 @@
     ],
     "image": "",
     "id": 13
+  },
+  {
+    "name": "Stinco di Maiale Glassato con Rosmarino e Senape + Verdure Arrosto",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "stinco di maiale precotto",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "carote",
+        "amount": 3,
+        "unit": "n"
+      },
+      {
+        "name": "cipolle",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "patate",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "senape",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "miele",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "rosmarino",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 0,
+        "unit": "ml"
+      },
+      {
+        "name": "sale",
+        "amount": 0,
+        "unit": "g"
+      },
+      {
+        "name": "pepe",
+        "amount": 0,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Preriscaldare il forno a 200°C. Distribuire carote, cipolle e patate su una teglia; condire con olio, sale, pepe e rosmarino.\n2. Bollire lo stinco nella sua confezione sigillata come indicato (solitamente 20-25 minuti).\n3. Mescolare senape e miele; rimuovere lo stinco dalla sua confezione e spennellare la glassa su tutta la superficie.\n4. Arrostire il tutto per 20-25 minuti, girando una volta, finché non sarà lucido e caramellato.",
+    "time": 60,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Stinco",
+      "Maiale",
+      "Verdure",
+      "Arrosto",
+      "Senape",
+      "Rosmarino"
+    ],
+    "image": "",
+    "id": 14
   }
 ]
