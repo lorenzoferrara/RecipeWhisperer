@@ -898,5 +898,70 @@
     ],
     "image": "",
     "id": 15
+  },
+  {
+    "name": "Pollo Cremoso al Limone e Parmigiano con Spinaci Saltati",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "petto di pollo affettato",
+        "amount": 650,
+        "unit": "g"
+      },
+      {
+        "name": "spinaci",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "limone",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "panna da cucina o panna leggera",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "name": "parmigiano grattugiato",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "aglio tritato",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Rosolare il pollo nell'olio a fuoco vivo finché non sarà dorato; condire con sale e pepe.\n2. Aggiungere l'aglio, ridurre la fiamma, aggiungere la panna, il succo e la scorza di limone.\n3. Sobbollire per 3–4 minuti finché non si addensa, quindi incorporare il parmigiano.\n4. In una padella separata, saltare gli spinaci con olio e sale; servire il pollo sopra.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "pollo",
+      "limone",
+      "parmigiano",
+      "spinaci",
+      "cremoso"
+    ],
+    "image": "",
+    "id": 16
   }
 ]
