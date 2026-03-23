@@ -384,5 +384,519 @@
     ],
     "image": "",
     "id": 7
+  },
+  {
+    "name": "Pollo al Lime e Riso Venere",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Petto di pollo a cubetti",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Riso Venere integrale",
+        "amount": 320,
+        "unit": "g"
+      },
+      {
+        "name": "Zucchine a rondelle",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "Piselli",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Lime",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Curcuma",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Yogurt greco 0%",
+        "amount": 250,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Lessa il riso: Cuoci il riso venere in acqua salata per 30-35 min. Scola e tieni da parte.\n2. Prepara il pollo: Marina il pollo con succo di lime e un pizzico di curcuma.\n3. Salta le verdure: In una padella con un filo d'olio, scotta le zucchine e i piselli per 6-7 min (devono restare sodi). Rimuovi dalla padella.\n4. Cottura finale: Nella stessa padella, cuoci il pollo a fiamma viva. Una volta cotto, abbassa il fuoco al minimo e aggiungi lo yogurt greco mescolando per creare una salsa vellutata.\n5. Impiatta: Crea una base di riso, aggiungi le verdure e copri con il pollo cremoso.",
+    "time": 45,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Fresco",
+      "Agrumato",
+      "Proteico",
+      "Sano"
+    ],
+    "image": "",
+    "id": 8
+  },
+  {
+    "name": "Salmone in Crosta di Erbe e Asparagi (Low Carb)",
+    "type": "Secondo",
+    "cuisine": "Mediterranea",
+    "ingredients": [
+      {
+        "name": "Filetto di salmone",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Asparagi",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Pomodorini",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Mandorle a lamelle",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Mix Erbe di Provenza",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Limone",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Olio d'oliva",
+        "amount": 10,
+        "unit": "ml"
+      }
+    ],
+    "instructions": "1. Rimuovi la base dura degli asparagi. Disponili su una teglia con i pomodorini tagliati a metà. Condisci con sale, pepe e un filo d'olio.\n2. In una ciotolina mescola le mandorle tritate grossolanamente, le erbe e la scorza di limone.\n3. Adagia il salmone sopra le verdure. Premi il mix di mandorle e erbe sulla parte superiore del pesce.\n4. Inforna a 200°C per 12-15 min. Il salmone deve risultare succoso.\n5. Spremi il succo di limone fresco sulle verdure prima di servire.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Low Carb",
+      "Mediterranea",
+      "Cena No-Carbo",
+      "Pesce",
+      "Salmone"
+    ],
+    "image": "",
+    "id": 9
+  },
+  {
+    "name": "Chili Classico di Manzo, Fagioli Neri e Quinoa",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Macinato di manzo scelto (<5% grassi)",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "Fagioli neri",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Quinoa tricolore",
+        "amount": 280,
+        "unit": "g"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Peperoni rossi",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Cipolla rossa",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Paprika dolce",
+        "amount": 2,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Cumino",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Origano",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Sciacqua la quinoa e cuocila in acqua (rapporto 1:2) per 12 min finché non assorbe tutto il liquido.\n2. Soffriggi cipolla e peperoni a cubetti. Aggiungi il manzo e sgranalo bene finché non è brunito.\n3. Aggiungi abbondante paprika, cumino e origano. Versa la passata di pomodoro e lascia sobbollire 15 min.\n4. Unisci i fagioli neri e scalda per altri 5 min. Regola di sale.\n5. Servi il chili denso sopra la quinoa sgranata.",
+    "time": 50,
+    "difficulty": "Media",
+    "servings": 4,
+    "tags": [
+      "Intenso",
+      "Saziante",
+      "Manzo",
+      "Fagioli",
+      "Quinoa",
+      "Chili"
+    ],
+    "image": "",
+    "id": 10
+  },
+  {
+    "name": "Tempeh al Miso e \"Cloud Scramble\" di Albumi (Low Carb)",
+    "type": "Secondo",
+    "cuisine": "Asiatica",
+    "ingredients": [
+      {
+        "name": "Tempeh",
+        "amount": 700,
+        "unit": "g"
+      },
+      {
+        "name": "Albume d'uovo",
+        "amount": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "Broccoli",
+        "amount": 1,
+        "unit": "kg"
+      },
+      {
+        "name": "Funghi Champignon",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Pasta di Miso",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Salsa di Soia",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Olio di sesamo",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Pepe bianco",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Spennella il tempeh con un mix di salsa di soia (o pasta di miso sciolta in poca acqua).\n2. Salta i broccoli e i funghi a fiamma alta con un filo d'olio di sesamo finché non sono dorati (circa 8 min).\n3. In una padella antiaderente, griglia il tempeh finché non diventa molto croccante all'esterno.\n4. Cuoci gli albumi in padella con un pizzico di pepe bianco, strapazzandoli velocemente per mantenerli spumosi.\n5. Servi il tempeh croccante sopra le verdure saltate, accompagnato dagli albumi \"cloud\".",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Low Carb",
+      "Umami",
+      "Senza Carboidrati"
+    ],
+    "image": "",
+    "id": 11
+  },
+  {
+    "name": "Tacchino alla Paprika e Taboulé di Farro",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Fesa di tacchino a straccetti",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "Farro integrale",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Pomodori",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Cetriolo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Cipollotto",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Tahina (crema di sesamo)",
+        "amount": 20,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Bolli il farro in acqua salata per 20-25 min. Scola e lascia intiepidire.\n2. Taglia pomodori, cetriolo e cipollotto a cubetti minuscoli. Unisci al farro con tantissimo prezzemolo e menta tritati. Condisci con limone e olio.\n3. Condisci il tacchino con la paprika affumicata. Saltalo in padella a fuoco vivo per 6 min fino a doratura completa.\n4. Diluisci la tahina con succo di limone e un goccio d'acqua fino a ottenere una salsa fluida.\n5. Disponi il tacchino sopra il taboulé di farro e versa la salsa tahina a filo.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Fresco",
+      "Proteico",
+      "Tacchino",
+      "Farro",
+      "Taboulé"
+    ],
+    "image": "",
+    "id": 12
+  },
+  {
+    "name": "Anatra in umido al vino rosso",
+    "type": "Secondo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "cosce d'anatra",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "carota",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "costa di sedano",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "aglio",
+        "amount": 1,
+        "unit": "spicchi"
+      },
+      {
+        "name": "vino rosso corposo",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "alloro",
+        "amount": 1,
+        "unit": "foglie"
+      },
+      {
+        "name": "rosmarino o timo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "olio EVO",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "brodo o acqua calda",
+        "amount": 100,
+        "unit": "ml"
+      }
+    ],
+    "instructions": "1. Preparazione degli aromi: Tritare cipolla, carota, sedano. Schiacciare leggermente l’aglio. Tenere da parte.\n2. Rosolatura delle cosce: In una padella larga e scoperta, imposta l'induzione a livello 6–7. Metti le cosce con la pelle verso il basso senza olio. Cuoci per 15–20 minuti senza muovere, finché la pelle diventa dorata e rilascia grasso. Gira le cosce e fai dorare l’altro lato per 5 minuti. Togli le cosce e mettile da parte.\n3. Soffritto: Usa il grasso rimasto nella padella. Imposta l'induzione a livello 4–5. Aggiungi cipolla, carota, sedano e cuoci per 8–10 minuti finché diventano morbidi, non bruciati. Aggiungi l'aglio negli ultimi 2 minuti.\n4. Sfumatura col vino: Rimetti le cosce in padella. Versa il vino rosso. Imposta l'induzione a livello 6. Lascia bollire per 5–7 minuti fino a che l’alcol evapora e il vino si riduce leggermente.\n5. Cottura lenta dell’umido: Aggiungi alloro e rosmarino. Copri con un coperchio. Abbassa l'induzione a livello 2–3. Cuoci per 1 ora e 45 minuti – 2 ore e 15 minuti, controllando ogni tanto. Se asciuga troppo, aggiungi poco brodo caldo o acqua.\n6. Finitura: Togli le cosce. Alza l'induzione a livello 5–6. Riduci il fondo di cottura fino a ottenere una salsa densa. Rimetti le cosce dentro, aggiusta di sale e pepe.\n7. Servizio: Servi con polenta, purè o patate arrosto. Il sugo denso è essenziale: versalo abbondante sopra la carne.",
+    "time": 150,
+    "difficulty": "Media",
+    "servings": 2,
+    "tags": [
+      "Anatra",
+      "Umido",
+      "Vino rosso",
+      "Secondo piatto",
+      "Induzione"
+    ],
+    "image": "",
+    "id": 13
+  },
+  {
+    "name": "Stinco di Maiale Glassato con Rosmarino e Senape + Verdure Arrosto",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "stinco di maiale precotto",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "carote",
+        "amount": 3,
+        "unit": "n"
+      },
+      {
+        "name": "cipolle",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "patate",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "senape",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "miele",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "rosmarino",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 0,
+        "unit": "ml"
+      },
+      {
+        "name": "sale",
+        "amount": 0,
+        "unit": "g"
+      },
+      {
+        "name": "pepe",
+        "amount": 0,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Preriscaldare il forno a 200°C. Distribuire carote, cipolle e patate su una teglia; condire con olio, sale, pepe e rosmarino.\n2. Bollire lo stinco nella sua confezione sigillata come indicato (solitamente 20-25 minuti).\n3. Mescolare senape e miele; rimuovere lo stinco dalla sua confezione e spennellare la glassa su tutta la superficie.\n4. Arrostire il tutto per 20-25 minuti, girando una volta, finché non sarà lucido e caramellato.",
+    "time": 60,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Stinco",
+      "Maiale",
+      "Verdure",
+      "Arrosto",
+      "Senape",
+      "Rosmarino"
+    ],
+    "image": "",
+    "id": 14
+  },
+  {
+    "name": "Pollo Cremoso al Limone e Parmigiano con Spinaci Saltati",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "petto di pollo a fette",
+        "amount": 650,
+        "unit": "g"
+      },
+      {
+        "name": "spinaci",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "limone (scorza + succo)",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "panna da cucina o panna leggera",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "name": "parmigiano grattugiato",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "spicchi d'aglio tritati",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 0,
+        "unit": "n"
+      },
+      {
+        "name": "sale",
+        "amount": 0,
+        "unit": "n"
+      },
+      {
+        "name": "pepe",
+        "amount": 0,
+        "unit": "n"
+      }
+    ],
+    "instructions": "1. Rosolare il pollo in olio a fuoco vivo finché non sarà dorato; condire con sale e pepe.\n2. Aggiungere l'aglio, ridurre la fiamma, aggiungere la panna + succo di limone + scorza.\n3. Sobbollire per 3-4 minuti finché non si addensa, quindi incorporare il parmigiano.\n4. In una padella separata, saltare gli spinaci con olio e sale; servire il pollo sopra.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "pollo",
+      "limone",
+      "parmigiano",
+      "spinaci",
+      "cremoso"
+    ],
+    "image": "",
+    "id": 15
   }
 ]
