@@ -503,5 +503,76 @@
     ],
     "image": "",
     "id": 9
+  },
+  {
+    "name": "Chili Classico di Manzo, Fagioli Neri e Quinoa",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Macinato di manzo scelto (<5% grassi)",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "Fagioli neri",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Quinoa tricolore",
+        "amount": 280,
+        "unit": "g"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Peperoni rossi",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Cipolla rossa",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Paprika dolce",
+        "amount": 2,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Cumino",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Origano",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Sciacqua la quinoa e cuocila in acqua (rapporto 1:2) per 12 min finché non assorbe tutto il liquido.\n2. Soffriggi cipolla e peperoni a cubetti. Aggiungi il manzo e sgranalo bene finché non è brunito.\n3. Aggiungi abbondante paprika, cumino e origano. Versa la passata di pomodoro e lascia sobbollire 15 min.\n4. Unisci i fagioli neri e scalda per altri 5 min. Regola di sale.\n5. Servi il chili denso sopra la quinoa sgranata.",
+    "time": 50,
+    "difficulty": "Media",
+    "servings": 4,
+    "tags": [
+      "Intenso",
+      "Saziante",
+      "Manzo",
+      "Fagioli",
+      "Quinoa",
+      "Chili"
+    ],
+    "image": "",
+    "id": 10
   }
 ]
