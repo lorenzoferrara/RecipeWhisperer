@@ -389,7 +389,7 @@
       "Proteico",
       "Sano"
     ],
-    "image": "",
+    "image": "images/pollo_al_lime_e_riso_venere.png",
     "id": 8,
     "code": "pollo_al_lime_e_riso_venere"
   },
@@ -455,7 +455,7 @@
       "Pesce",
       "Salmone"
     ],
-    "image": "",
+    "image": "images/salmone_in_crosta_di_erbe.png",
     "id": 9,
     "code": "salmone_in_crosta_di_erbe"
   },
@@ -527,7 +527,7 @@
       "Quinoa",
       "Chili"
     ],
-    "image": "",
+    "image": "images/chili_classico_di_manzo_fagioli.png",
     "id": 10,
     "code": "chili_classico_di_manzo_fagioli"
   },
@@ -586,7 +586,7 @@
       "Umami",
       "Senza Carboidrati"
     ],
-    "image": "",
+    "image": "images/tempeh_al_miso_e_cloud_scramble.png",
     "id": 11,
     "code": "tempeh_al_miso_e_cloud_scramble"
   },
@@ -637,7 +637,7 @@
       "Farro",
       "Taboulé"
     ],
-    "image": "",
+    "image": "images/tacchino_alla_paprika_e_taboule.png",
     "id": 12,
     "code": "tacchino_alla_paprika_e_taboule"
   },

@@ -147,6 +147,35 @@ export default async function handler(req, res) {
     recipe.id = recipes.length > 0 ? Math.max(...recipes.map(r => r.id)) + 1 : 1;
     recipes.push(recipe);
 
+    // 3.1 Generate image for new recipe (if possible)
+    try {
+      const imageData = await generateImageWithGemini(recipe);
+      const imageName = `${recipe.code || slugifyName(recipe.name)}.png`;
+      const imagePath = `images/${imageName}`;
+
+      recipe.image = imagePath;
+
+      let imageSha = null;
+      try {
+        const existingImage = await getFileFromGitHub(imagePath);
+        imageSha = existingImage.sha;
+      } catch (imageErr) {
+        if (!/404/.test(String(imageErr))) {
+          console.warn('Impossibile controllare se immagine esiste:', imageErr.message || imageErr);
+        }
+      }
+
+      await commitToGitHub(
+        imagePath,
+        Buffer.from(imageData).toString('base64'),
+        imageSha,
+        `🖼 Aggiungi immagine ricetta: ${recipe.name}`
+      );
+    } catch (errImage) {
+      console.warn('Impossibile generare immagine automaticamente:', errImage.message || errImage);
+      // continuiamo comunque con il salvataggio ricetta senza immagine
+    }
+
     // 4. Commit back to GitHub
     await commitToGitHub(
       'data/recipes.json',
@@ -247,6 +276,69 @@ ${recipeText}
   } catch {
     throw new Error(`Gemini ha restituito JSON non valido:\n${cleaned}`);
   }
+}
+
+async function generateImageWithGemini(recipe) {
+  const prompt = buildImagePrompt(recipe);
+
+  const res = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-goog-api-key": GEMINI_API_KEY,
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [
+              { text: prompt }
+            ]
+          }
+        ],
+        generationConfig: {
+          temperature: 0.8
+        }
+      })
+    }
+  );
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Image Gemini error: ${err}`);
+  }
+
+  const data = await res.json();
+
+  // ⚠️ QUI DIPENDE DAL MODELLO (mock generico)
+  const imgBase64 =
+    data.candidates?.[0]?.content?.parts?.find(p => p.inlineData)?.inlineData?.data;
+
+  if (!imgBase64) {
+    throw new Error("Nessuna immagine restituita");
+  }
+
+  return Buffer.from(imgBase64, "base64");
+}
+
+function buildImagePrompt(recipe) {
+  const name = recipe.name;
+  const cuisine = recipe.cuisine;
+
+  const main = recipe.ingredients
+    .slice(0, 6)
+    .map(i => `${i.amount} ${i.unit} ${i.name}`)
+    .join(", ");
+
+  return `
+A professional food photography shot of ${name},
+${main} visible in the composition.
+Served in a dish appropriate to ${cuisine} cuisine.
+Golden and crispy, vibrant and colorful.
+Shot at 45-degree angle, soft natural light,
+shallow depth of field, photorealistic.
+`;
 }
 
 function slugifyName(name) {
