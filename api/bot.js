@@ -1,6 +1,9 @@
 // api/bot.js — Vercel Serverless Function
 // Receives Telegram webhook, calls Gemini, commits to GitHub
 
+const fs = require('fs');
+const path = require('path');
+
 const TELEGRAM_TOKEN  = process.env.TELEGRAM_TOKEN;
 const GEMINI_API_KEY  = process.env.GEMINI_API_KEY;
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
@@ -70,7 +73,8 @@ export default async function handler(req, res) {
           .join('\n');
 
         await sendTelegram(chatId,
-          `📖 *${recipe.name}* (id: ${recipe.id})\n\n` +
+          `📖 *${recipe.name}* (id: ${recipe.id})\n` +
+          `🆔 *Codice:* ${recipe.code || 'n/a'}\n\n` +
           `📋 *Tipo:* ${recipe.type}\n` +
           `🌍 *Cucina:* ${recipe.cuisine}\n` +
           `⏱ *Tempo:* ${recipe.time} min\n` +
@@ -187,6 +191,7 @@ Dato il seguente testo di una ricetta, restituisci SOLO un oggetto JSON valido, 
 Il JSON deve avere esattamente questa struttura:
 {
   "name": "Nome della ricetta",
+  "code": "codice univoco breve, lowercase, underscore (es. pasta_al_pomodoro)",
   "type": "uno tra: Primo, Secondo, Contorno, Dolce, Colazione, Antipasto, Zuppa",
   "cuisine": "es. Italiana, Francese, Indiana, Greca, Moderna, Giapponese, ecc.",
   "ingredients": [
@@ -195,7 +200,7 @@ Il JSON deve avere esattamente questa struttura:
   "instructions": "1. Primo passo.\n2. Secondo passo.\n3. ...",
   "time": 30,
   "difficulty": "uno tra: Facile, Media, Difficile",
-  "servings": 4,
+  "servings": "numero d servings",
   "tags": ["tag1", "tag2"],
   "image": ""
 }
@@ -244,6 +249,37 @@ ${recipeText}
   }
 }
 
+function slugifyName(name) {
+  let base = String(name || '')
+    .toLowerCase()
+    .trim()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_|_$/g, '');
+
+  if (base.length <= 32) return base;
+
+  const words = base.split('_').filter(Boolean);
+  const parts = [];
+  for (const w of words) {
+    const candidate = parts.concat(w).join('_');
+    if (candidate.length <= 32) {
+      parts.push(w);
+    } else {
+      break;
+    }
+  }
+
+  const stopWords = new Set(['e', 'di', 'a', 'da', 'in', 'con', 'per', 'al', 'alla', 'del', 'della', 'dello']);
+  if (parts.length > 1 && stopWords.has(parts[parts.length - 1])) {
+    parts.pop();
+  }
+
+  return parts.length > 0 ? parts.join('_') : base.slice(0, 32).replace(/_$/g, '');
+}
+
 function normalizeRecipe(recipe) {
   if (!recipe || !Array.isArray(recipe.ingredients)) return recipe;
 
@@ -263,6 +299,25 @@ function normalizeRecipe(recipe) {
 
     return { ...ing, amount: 1, unit: 'pizzico' };
   });
+
+  if (!recipe.code || typeof recipe.code !== 'string' || !recipe.code.trim()) {
+    recipe.code = slugifyName(recipe.name || 'ricetta');
+  }
+
+  // Se esiste un'immagine in /images con lo stesso nome del codice, usala.
+  if (!recipe.image || !String(recipe.image).trim()) {
+    const imageBase = recipe.code;
+    const imageDir = path.join(process.cwd(), 'images');
+    const candidates = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
+
+    for (const ext of candidates) {
+      const candidatePath = path.join(imageDir, `${imageBase}${ext}`);
+      if (fs.existsSync(candidatePath)) {
+        recipe.image = `images/${imageBase}${ext}`;
+        break;
+      }
+    }
+  }
 
   return recipe;
 }
