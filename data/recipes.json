@@ -31,7 +31,6 @@
         "unit": "pizzico"
       }
     ],
-    "image": "images/carbonara.jpg",
     "instructions": "1. Portare a ebollizione abbondante acqua salata e cuocere gli spaghetti al dente.\n2. Rosolare la pancetta in padella finché croccante. Togliere dal fuoco.\n3. Sbattere le uova con il pecorino grattugiato e abbondante pepe nero.\n4. Scolare la pasta tenendo da parte un mestolo di acqua di cottura.\n5. Mantecare la pasta calda con la pancetta (fuori fuoco), aggiungere il composto di uova mescolando velocemente.\n6. Aggiungere l'acqua di cottura poco alla volta fino a ottenere una crema.\n7. Servire immediatamente con altro pecorino e pepe.",
     "time": 20,
     "difficulty": "Media",
@@ -85,7 +84,6 @@
         "unit": "cucchiaino"
       }
     ],
-    "image": "images/greek-salad.jpg",
     "instructions": "1. Tagliare pomodori e cetriolo a pezzi grossi.\n2. Affettare finemente la cipolla rossa.\n3. Unire le verdure in una ciotola con le olive.\n4. Aggiungere la feta a blocco o sbriciolata.\n5. Condire con abbondante olio d'oliva.\n6. Cospargere con origano secco e un pizzico di sale.\n7. Mescolare delicatamente e servire subito.",
     "time": 10,
     "difficulty": "Facile",
@@ -139,7 +137,6 @@
         "unit": "cucchiaino"
       }
     ],
-    "image": "images/lava-cake.jpg",
     "instructions": "1. Preriscaldare il forno a 220°C. Imburrare gli stampini e spolverare con cacao.\n2. Sciogliere il cioccolato con il burro a bagnomaria.\n3. Sbattere uova, tuorli e zucchero fino a ottenere un composto chiaro.\n4. Incorporare il cioccolato fuso, poi la farina setacciata.\n5. Versare negli stampini e refrigerare 30 minuti (fino a 24 ore).\n6. Cuocere 12 minuti — i bordi devono essere sodi, il centro morbido.\n7. Attendere 1 minuto, capovolgere sul piatto e servire con gelato.",
     "time": 45,
     "difficulty": "Media",
@@ -188,7 +185,6 @@
         "unit": "cucchiaio"
       }
     ],
-    "image": "images/avocado-toast.jpg",
     "instructions": "1. Tostare le fette di pane finché dorate e croccanti.\n2. Aprire gli avocado, eliminare il nocciolo e raccogliere la polpa in una ciotola.\n3. Schiacciare con una forchetta; aggiungere succo di limone, sale e olio d'oliva.\n4. Spalmare generosamente sul pane tostato.\n5. Completare con scaglie di peperoncino e un filo d'olio.\n6. Facoltativo: aggiungere un uovo in camicia, salmone affumicato o germogli.",
     "time": 10,
     "difficulty": "Facile",
@@ -267,7 +263,6 @@
         "unit": "cucchiaino"
       }
     ],
-    "image": "images/tikka-masala.jpg",
     "instructions": "1. Marinare il pollo con yogurt, limone e spezie per almeno 1 ora.\n2. Grigliare o rosolare il pollo fino a doratura. Mettere da parte.\n3. Soffriggere cipolla, aglio e zenzero fino a doratura.\n4. Aggiungere pomodori e spezie; cuocere a fuoco lento 15 minuti.\n5. Frullare la salsa fino a renderla liscia, rimetterla in padella.\n6. Unire il pollo e la panna; cuocere 10 minuti.\n7. Guarnire con coriandolo fresco e servire con riso o naan.",
     "time": 60,
     "difficulty": "Media",
@@ -326,7 +321,6 @@
         "unit": "cucchiai"
       }
     ],
-    "image": "images/panzanella.jpg",
     "instructions": "1. Spezzare il pane a pezzi; tostarlo leggermente o lasciarlo raffermo una notte.\n2. Ammollare il pane in acqua per 10 minuti, poi strizzarlo bene.\n3. Tagliare pomodori e cetriolo; affettare finemente la cipolla.\n4. Unire tutte le verdure con i capperi e il pane.\n5. Condire con aceto di vino rosso e abbondante olio d'oliva.\n6. Aggiungere il basilico spezzato. Regolare di sale.\n7. Lasciare riposare 30 minuti prima di servire — il sapore migliora.",
     "time": 20,
     "difficulty": "Facile",
@@ -389,7 +383,6 @@
       "Proteico",
       "Sano"
     ],
-    "image": "images/pollo_al_lime_e_riso_venere.png",
     "id": 8,
     "code": "pollo_al_lime_e_riso_venere"
   },
@@ -455,7 +448,6 @@
       "Pesce",
       "Salmone"
     ],
-    "image": "images/salmone_in_crosta_di_erbe.png",
     "id": 9,
     "code": "salmone_in_crosta_di_erbe"
   },
@@ -527,7 +519,6 @@
       "Quinoa",
       "Chili"
     ],
-    "image": "images/chili_classico_di_manzo_fagioli.png",
     "id": 10,
     "code": "chili_classico_di_manzo_fagioli"
   },
@@ -586,7 +577,6 @@
       "Umami",
       "Senza Carboidrati"
     ],
-    "image": "images/tempeh_al_miso_e_cloud_scramble.png",
     "id": 11,
     "code": "tempeh_al_miso_e_cloud_scramble"
   },
@@ -637,7 +627,6 @@
       "Farro",
       "Taboulé"
     ],
-    "image": "images/tacchino_alla_paprika_e_taboule.png",
     "id": 12,
     "code": "tacchino_alla_paprika_e_taboule"
   },
@@ -718,7 +707,6 @@
       "Secondo piatto",
       "Induzione"
     ],
-    "image": "",
     "id": 13,
     "code": "anatra_in_umido_al_vino_rosso"
   },
@@ -790,7 +778,6 @@
       "Senape",
       "Rosmarino"
     ],
-    "image": "",
     "id": 14,
     "code": "stinco_di_maiale_glassato"
   },
@@ -856,7 +843,6 @@
       "spinaci",
       "cremoso"
     ],
-    "image": "",
     "id": 15,
     "code": "pollo_cremoso_al_limone"
   },
@@ -921,7 +907,6 @@
       "Pesce",
       "Sano"
     ],
-    "image": "",
     "id": 17,
     "code": "salmone_con_burro_alle_erbe"
   },
@@ -986,7 +971,6 @@
       "Ricotta Salata",
       "Vegetariano"
     ],
-    "image": "",
     "id": 18,
     "code": "pasta_alla_norma"
   },
@@ -1051,7 +1035,6 @@
       "Torta",
       "Facile"
     ],
-    "image": "",
     "id": 19,
     "code": "torta_allo_yogurt_bianco_con_1"
   },
@@ -1131,7 +1114,6 @@
       "Gamberetti",
       "Zuppa"
     ],
-    "image": "",
     "id": 20,
     "code": "vellutata_di_cavolfiore"
   },
@@ -1233,7 +1215,6 @@
       "Sano",
       "Low Carb"
     ],
-    "image": "",
     "id": 21
   },
   {
@@ -1305,7 +1286,6 @@
       "spinaci",
       "pomodorini"
     ],
-    "image": "",
     "id": 22
   },
   {
@@ -1371,7 +1351,6 @@
       "yogurt",
       "griglia"
     ],
-    "image": "",
     "id": 23
   }
 ]

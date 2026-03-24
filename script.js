@@ -105,9 +105,11 @@ function renderCards() {
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', `Apri ricetta: ${recipe.name}`);
 
-    const imgHtml = recipe.image
-      ? `<img src="${recipe.image}" alt="${recipe.name}" loading="lazy"
-             onerror="this.parentNode.innerHTML='<div class=card-placeholder>${emojiFor(recipe.type)}</div>'" />`
+    // Try .png first, then .jpg
+    const imagePath = recipe.code ? `images/${recipe.code}.png` : null;
+    const imgHtml = imagePath
+      ? `<img src="${imagePath}" alt="${recipe.name}" loading="lazy"
+             onerror="this.src='images/${recipe.code}.jpg'; if(this.dataset.retried) this.parentNode.innerHTML='<div class=card-placeholder>${emojiFor(recipe.type)}</div>'; this.dataset.retried=true;" />`
       : `<div class="card-placeholder">${emojiFor(recipe.type)}</div>`;
 
     card.innerHTML = `
@@ -181,16 +183,25 @@ function formatQty(amount, unit) {
 
 function openModal(recipe) {
   // Image or emoji placeholder
-  if (recipe.image) {
-    modalImg.src   = recipe.image;
+  const imagePath = recipe.code ? `images/${recipe.code}.png` : null;
+  if (imagePath) {
+    modalImg.src   = imagePath;
     modalImg.alt   = recipe.name;
     modalImg.style.display = '';
     modalImg.onerror = () => {
-      modalImg.style.display = 'none';
-      const ph = document.createElement('div');
-      ph.className = 'modal-placeholder';
-      ph.textContent = emojiFor(recipe.type);
-      modalImg.parentNode.insertBefore(ph, modalImg);
+      // Try .jpg if .png fails
+      if (modalImg.src.endsWith('.png')) {
+        modalImg.src = `images/${recipe.code}.jpg`;
+      } else {
+        // Both failed, show emoji
+        modalImg.style.display = 'none';
+        const existing = document.querySelector('.modal-placeholder');
+        if (existing) existing.remove();
+        const ph = document.createElement('div');
+        ph.className = 'modal-placeholder';
+        ph.textContent = emojiFor(recipe.type);
+        modalImg.parentNode.insertBefore(ph, modalImg);
+      }
     };
   } else {
     modalImg.style.display = 'none';

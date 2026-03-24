@@ -304,20 +304,6 @@ function normalizeRecipe(recipe) {
     recipe.code = slugifyName(recipe.name || 'ricetta');
   }
 
-  // Se esiste un'immagine in /images con lo stesso nome del codice, usala.
-  if (!recipe.image || !String(recipe.image).trim()) {
-    const imageBase = recipe.code;
-    const imageDir = path.join(process.cwd(), 'images');
-    const candidates = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
-
-    for (const ext of candidates) {
-      const candidatePath = path.join(imageDir, `${imageBase}${ext}`);
-      if (fs.existsSync(candidatePath)) {
-        recipe.image = `images/${imageBase}${ext}`;
-        break;
-      }
-    }
-  }
 
   return recipe;
 }
