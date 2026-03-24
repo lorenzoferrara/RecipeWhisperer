@@ -1134,5 +1134,106 @@
     "image": "",
     "id": 20,
     "code": "vellutata_di_cavolfiore"
+  },
+  {
+    "name": "Bowl di Pollo alla Greca",
+    "code": "bowl_di_pollo_alla_greca",
+    "type": "Secondo",
+    "cuisine": "Greca",
+    "ingredients": [
+      {
+        "name": "petto di pollo",
+        "amount": 700,
+        "unit": "g"
+      },
+      {
+        "name": "cavolfiore",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "pomodorini ciliegino",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "cetriolo",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla rossa",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "feta",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "olive nere",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "limone",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "yogurt greco",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "tahini",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "spicchi d'aglio",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "origano",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "paprika",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Preparare il riso di cavolfiore: Grattugiare il cavolfiore o tritarlo in un robot da cucina fino a ottenere una consistenza simile al riso. Saltare per 5-6 minuti in olio d'oliva con sale, pepe e scorza di limone. Tenere in caldo.\n2. Cuocere il pollo: Tagliare i petti di pollo a striscioline. Condire con olio d'oliva, sale, pepe, origano e paprika. Grigliare o rosolare in padella per 5-6 minuti per lato, fino a quando non saranno dorati e cotti.\n3. Preparare il condimento: Mescolare lo yogurt, il tahini, il succo di limone e l'aglio tritato; condire a piacere.\n4. Assemblare le bowl: Disporre a strati il riso di cavolfiore, poi il pollo, quindi cetrioli, pomodori, cipolla, olive e feta. Infine, irrorare con il condimento.",
+    "time": 35,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Pollo",
+      "Greco",
+      "Bowl",
+      "Sano",
+      "Low Carb"
+    ],
+    "image": "",
+    "id": 21
   }
 ]
