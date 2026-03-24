@@ -31,9 +31,96 @@ export default async function handler(req, res) {
       await sendTelegram(chatId,
         '👨‍🍳 *Recipe Whisperer*\n\n' +
         'Mandami una ricetta in linguaggio naturale e la aggiungo automaticamente al sito.\n\n' +
+        '*Comandi disponibili:*\n' +
+        '`/view` → lista ricette\n' +
+        '`/view <id>` → dettagli ricetta\n' +
+        '`/delete <id>` → elimina ricetta\n\n' +
         'Puoi scrivere in modo libero, ad esempio:\n' +
         '_"Pasta al pomodoro: 320g spaghetti, 400g pomodori pelati, aglio, olio, basilico. Soffriggere aglio, aggiungere pomodori, cuocere 15 min, mantecare la pasta."_'
       );
+      return res.status(200).end();
+    }
+
+    const { command, args } = parseCommand(text);
+
+    if (command === 'view') {
+      const { content } = await getFileFromGitHub('data/recipes.json');
+      const recipes = JSON.parse(content);
+
+      if (!recipes.length) {
+        await sendTelegram(chatId, '📭 Nessuna ricetta disponibile.');
+        return res.status(200).end();
+      }
+
+      const requestedId = parseNumericId(args);
+      if (args && requestedId === null) {
+        await sendTelegram(chatId, '⚠️ Uso corretto: `/view` oppure `/view <id>`');
+        return res.status(200).end();
+      }
+
+      if (requestedId !== null) {
+        const recipe = recipes.find((r) => Number(r.id) === requestedId);
+        if (!recipe) {
+          await sendTelegram(chatId, `❌ Ricetta con id ${requestedId} non trovata.`);
+          return res.status(200).end();
+        }
+
+        const ingredientList = (recipe.ingredients || [])
+          .map((i) => `• ${i.amount} ${i.unit !== 'n' ? i.unit : ''} ${i.name}`.trim())
+          .join('\n');
+
+        await sendTelegram(chatId,
+          `📖 *${recipe.name}* (id: ${recipe.id})\n\n` +
+          `📋 *Tipo:* ${recipe.type}\n` +
+          `🌍 *Cucina:* ${recipe.cuisine}\n` +
+          `⏱ *Tempo:* ${recipe.time} min\n` +
+          `💪 *Difficoltà:* ${recipe.difficulty}\n` +
+          `👤 *Porzioni:* ${recipe.servings}\n\n` +
+          `*Ingredienti:*\n${ingredientList || 'Nessun ingrediente'}\n\n` +
+          `*Procedimento:*\n${recipe.instructions || 'Nessun procedimento'}`
+        );
+        return res.status(200).end();
+      }
+
+      const list = recipes
+        .slice()
+        .sort((a, b) => Number(a.id) - Number(b.id))
+        .map((r) => `• ${r.id} — ${r.name}`)
+        .join('\n');
+
+      await sendTelegram(chatId,
+        `📚 *Ricette disponibili (${recipes.length})*\n\n${list}\n\n` +
+        'Usa `/view <id>` per vedere i dettagli.'
+      );
+      return res.status(200).end();
+    }
+
+    if (command === 'delete') {
+      const requestedId = parseNumericId(args);
+      if (requestedId === null) {
+        await sendTelegram(chatId, '⚠️ Uso corretto: `/delete <id>`');
+        return res.status(200).end();
+      }
+
+      const { content, sha } = await getFileFromGitHub('data/recipes.json');
+      const recipes = JSON.parse(content);
+      const recipeIndex = recipes.findIndex((r) => Number(r.id) === requestedId);
+
+      if (recipeIndex === -1) {
+        await sendTelegram(chatId, `❌ Ricetta con id ${requestedId} non trovata.`);
+        return res.status(200).end();
+      }
+
+      const [removedRecipe] = recipes.splice(recipeIndex, 1);
+
+      await commitToGitHub(
+        'data/recipes.json',
+        JSON.stringify(recipes, null, 2),
+        sha,
+        `🗑 Elimina ricetta: ${removedRecipe.name}`
+      );
+
+      await sendTelegram(chatId, `🗑 Ricetta eliminata: *${removedRecipe.name}* (id: ${removedRecipe.id})`);
       return res.status(200).end();
     }
 
@@ -48,8 +135,8 @@ export default async function handler(req, res) {
     // 1. Call Gemini to structure the recipe
     const recipe = await structureWithGemini(text);
 
-    // 2. Load current recipes.json from GitHub
-    const { content, sha } = await getFileFromGitHub('recipes.json');
+    // 2. Load current data/recipes.json from GitHub
+    const { content, sha } = await getFileFromGitHub('data/recipes.json');
     const recipes = JSON.parse(content);
 
     // 3. Assign a new id and push
@@ -58,7 +145,7 @@ export default async function handler(req, res) {
 
     // 4. Commit back to GitHub
     await commitToGitHub(
-      'recipes.json',
+      'data/recipes.json',
       JSON.stringify(recipes, null, 2),
       sha,
       `🍽 Aggiungi ricetta: ${recipe.name}`
@@ -228,4 +315,25 @@ async function sendTelegram(chatId, text) {
       parse_mode: 'Markdown'
     })
   });
+}
+
+function parseCommand(text) {
+  const trimmed = String(text || '').trim();
+  const match = trimmed.match(/^\/([a-zA-Z]+)(?:@\w+)?(?:\s+([\s\S]*))?$/);
+
+  if (!match) {
+    return { command: null, args: '' };
+  }
+
+  return {
+    command: match[1].toLowerCase(),
+    args: (match[2] || '').trim(),
+  };
+}
+
+function parseNumericId(raw) {
+  const normalized = String(raw || '').trim();
+  if (!normalized) return null;
+  if (!/^\d+$/.test(normalized)) return null;
+  return Number(normalized);
 }

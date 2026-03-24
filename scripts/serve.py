@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Local dev server for La Cucina recipe site.
-Run from the project folder:  python3 serve.py
+Run from the project folder:  python3 scripts/serve.py
 Then open:                    http://localhost:8000
 """
 
@@ -29,23 +29,24 @@ def open_browser():
 
 
 def main():
-    # Make sure we serve from the directory where this script lives
+    # Serve from project root (parent of the scripts/ directory)
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    os.chdir(script_dir)
+    project_root = os.path.dirname(script_dir)
+    os.chdir(project_root)
 
     # Check that the key files are present
-    missing = [f for f in ("index.html", "style.css", "script.js", "recipes.json")
+    missing = [f for f in ("index.html", "style.css", "script.js", "data/recipes.json")
                if not os.path.exists(f)]
     if missing:
         print(f"⚠  Missing files: {', '.join(missing)}")
-        print("   Make sure serve.py is in the same folder as index.html.")
+        print("   Make sure you're running this script from the project structure.")
         sys.exit(1)
 
     try:
         with socketserver.TCPServer((HOST, PORT), Handler) as httpd:
             print()
             print("  ✦  La Cucina — local dev server")
-            print(f"     Serving from: {script_dir}")
+            print(f"     Serving from: {project_root}")
             print(f"     URL:          http://{HOST}:{PORT}")
             print()
             print("  Press Ctrl+C to stop.")
@@ -60,7 +61,7 @@ def main():
     except OSError as e:
         if "Address already in use" in str(e):
             print(f"✗  Port {PORT} is already in use.")
-            print(f"   Either stop the other process, or change PORT in serve.py.")
+            print(f"   Either stop the other process, or change PORT in scripts/serve.py.")
         else:
             print(f"✗  Server error: {e}")
         sys.exit(1)

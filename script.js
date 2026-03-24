@@ -34,13 +34,13 @@ const modalInstructions = document.getElementById('modal-instructions');
 /* ─── INIT ───────────────────────────────────────────────── */
 async function init() {
   try {
-    const res  = await fetch('recipes.json');
+    const res  = await fetch('data/recipes.json');
     allRecipes = await res.json();
     populateFilters();
     applyFilters();
   } catch (err) {
     grid.innerHTML = `<p style="color:#b85c38;padding:24px">
-      Impossibile caricare recipes.json — assicurati che il file sia nella stessa cartella.
+      Impossibile caricare data/recipes.json — controlla che il file esista.
     </p>`;
     console.error(err);
   }
