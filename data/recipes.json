@@ -98,60 +98,6 @@
     "code": "insalata_greca"
   },
   {
-    "id": 3,
-    "name": "Tortino al Cioccolato Fondente",
-    "type": "Dolce",
-    "cuisine": "Francese",
-    "ingredients": [
-      {
-        "name": "cioccolato fondente",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "burro",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "uova intere",
-        "amount": 2,
-        "unit": "n"
-      },
-      {
-        "name": "tuorli",
-        "amount": 2,
-        "unit": "n"
-      },
-      {
-        "name": "zucchero",
-        "amount": 80,
-        "unit": "g"
-      },
-      {
-        "name": "farina",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "estratto di vaniglia",
-        "amount": 1,
-        "unit": "cucchiaino"
-      }
-    ],
-    "image": "images/lava-cake.jpg",
-    "instructions": "1. Preriscaldare il forno a 220°C. Imburrare gli stampini e spolverare con cacao.\n2. Sciogliere il cioccolato con il burro a bagnomaria.\n3. Sbattere uova, tuorli e zucchero fino a ottenere un composto chiaro.\n4. Incorporare il cioccolato fuso, poi la farina setacciata.\n5. Versare negli stampini e refrigerare 30 minuti (fino a 24 ore).\n6. Cuocere 12 minuti — i bordi devono essere sodi, il centro morbido.\n7. Attendere 1 minuto, capovolgere sul piatto e servire con gelato.",
-    "time": 45,
-    "difficulty": "Media",
-    "servings": 4,
-    "tags": [
-      "cioccolato",
-      "dolce",
-      "cena speciale"
-    ],
-    "code": "tortino_al_cioccolato_fondente"
-  },
-  {
     "id": 4,
     "name": "Toast all'Avocado",
     "type": "Colazione",
