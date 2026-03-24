@@ -98,55 +98,6 @@
     "code": "insalata_greca"
   },
   {
-    "id": 4,
-    "name": "Toast all'Avocado",
-    "type": "Colazione",
-    "cuisine": "Moderna",
-    "ingredients": [
-      {
-        "name": "pane a lievitazione naturale",
-        "amount": 2,
-        "unit": "fette"
-      },
-      {
-        "name": "avocado",
-        "amount": 1,
-        "unit": "n"
-      },
-      {
-        "name": "limone",
-        "amount": 0.5,
-        "unit": "n"
-      },
-      {
-        "name": "peperoncino in scaglie",
-        "amount": 1,
-        "unit": "pizzico"
-      },
-      {
-        "name": "sale",
-        "amount": 1,
-        "unit": "pizzico"
-      },
-      {
-        "name": "olio d'oliva",
-        "amount": 1,
-        "unit": "cucchiaio"
-      }
-    ],
-    "image": "images/avocado-toast.jpg",
-    "instructions": "1. Tostare le fette di pane finché dorate e croccanti.\n2. Aprire gli avocado, eliminare il nocciolo e raccogliere la polpa in una ciotola.\n3. Schiacciare con una forchetta; aggiungere succo di limone, sale e olio d'oliva.\n4. Spalmare generosamente sul pane tostato.\n5. Completare con scaglie di peperoncino e un filo d'olio.\n6. Facoltativo: aggiungere un uovo in camicia, salmone affumicato o germogli.",
-    "time": 10,
-    "difficulty": "Facile",
-    "servings": 2,
-    "tags": [
-      "vegetariano",
-      "veloce",
-      "sano"
-    ],
-    "code": "toast_all_avocado"
-  },
-  {
     "id": 5,
     "name": "Pollo Tikka Masala",
     "type": "Secondo",
