@@ -1307,5 +1307,71 @@
     ],
     "image": "",
     "id": 22
+  },
+  {
+    "name": "Spiedini di Manzo al Rosmarino con Zucca Arrosto e Salsa allo Yogurt e Aglio",
+    "code": "spiedini_manzo_rosmarino_zucca",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "manzo magro (fesa o controfiletto)",
+        "amount": 700,
+        "unit": "g"
+      },
+      {
+        "name": "zucca",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "name": "rosmarino fresco tritato",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "yogurt greco",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "aglio tritato",
+        "amount": 1,
+        "unit": "spicchi"
+      },
+      {
+        "name": "limone (succo)",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Prepara la zucca: Condisci le fette di zucca con olio d'oliva, rosmarino, sale e pepe. Arrostiti a 200 °C per circa 25 minuti finché non saranno tenere e leggermente caramellate.\n2. Prepara gli spiedini: Infila i cubetti di manzo su spiedini di metallo o di legno (precedentemente ammollati). Spennella con olio d'oliva, condisci con sale e pepe.\n3. Griglia il manzo: Cuoci su una piastra o barbecue per 2-3 minuti per lato (per una cottura al sangue o media). Lascia riposare qualche minuto.\n4. Prepara la salsa: Mescola lo yogurt, l'aglio, il succo di limone e un filo d'olio d'oliva. Servi.",
+    "time": 40,
+    "difficulty": "Media",
+    "servings": "4",
+    "tags": [
+      "manzo",
+      "spiedini",
+      "zucca",
+      "yogurt",
+      "griglia"
+    ],
+    "image": "",
+    "id": 23
   }
 ]
