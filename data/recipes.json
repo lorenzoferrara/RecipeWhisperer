@@ -1235,5 +1235,77 @@
     ],
     "image": "",
     "id": 21
+  },
+  {
+    "name": "Salmone Mediterraneo con Spinaci e Olive, Pomodorini e Orzo",
+    "code": "salmone_mediterraneo_spinaci_orzo",
+    "type": "Secondo",
+    "cuisine": "Mediterranea",
+    "ingredients": [
+      {
+        "name": "filetti di salmone",
+        "amount": 4,
+        "unit": "n"
+      },
+      {
+        "name": "spinaci novelli",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "pomodorini ciliegino",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "olive nere",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "orzo",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "spicchi d'aglio",
+        "amount": 2,
+        "unit": "spicchi"
+      },
+      {
+        "name": "limone",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "olio d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Cuocere l'orzo: Bollire l'orzo in acqua salata secondo le istruzioni della confezione (~8–10 min), quindi scolare e condire con un filo d'olio d'oliva.\n2. Cuocere il salmone: Asciugare i filetti; condire con sale, pepe, olio d'oliva e scorza di limone. Rosolare dalla parte della pelle per 4–5 min, capovolgere, cuocere per altri 3–4 min. Togliere e lasciare riposare.\n3. Saltare le verdure: Nella stessa padella, aggiungere un filo d'olio e l'aglio; cuocere brevemente. Aggiungere i pomodorini, cuocere fino a quando non si saranno ammorbiditi (~4 min). Aggiungere gli spinaci e le olive; cuocere fino a quando non saranno appassiti.\n4. Servire: Unire l'orzo cotto con le verdure saltate. Impiattare il mix di orzo e verdure, guarnire con il salmone, irrorare con succo di limone e servire caldo.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": "4",
+    "tags": [
+      "salmone",
+      "pesce",
+      "mediterraneo",
+      "orzo",
+      "spinaci",
+      "pomodorini"
+    ],
+    "image": "",
+    "id": 22
   }
 ]
