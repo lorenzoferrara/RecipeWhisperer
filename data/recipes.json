@@ -1,58 +1,5 @@
 [
   {
-    "id": 2,
-    "name": "Insalata Greca",
-    "type": "Contorno",
-    "cuisine": "Greca",
-    "ingredients": [
-      {
-        "name": "pomodori",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "cetriolo",
-        "amount": 1,
-        "unit": "n"
-      },
-      {
-        "name": "feta",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "olive kalamata",
-        "amount": 80,
-        "unit": "g"
-      },
-      {
-        "name": "cipolla rossa",
-        "amount": 0.5,
-        "unit": "n"
-      },
-      {
-        "name": "olio d'oliva",
-        "amount": 3,
-        "unit": "cucchiai"
-      },
-      {
-        "name": "origano",
-        "amount": 1,
-        "unit": "cucchiaino"
-      }
-    ],
-    "instructions": "1. Tagliare pomodori e cetriolo a pezzi grossi.\n2. Affettare finemente la cipolla rossa.\n3. Unire le verdure in una ciotola con le olive.\n4. Aggiungere la feta a blocco o sbriciolata.\n5. Condire con abbondante olio d'oliva.\n6. Cospargere con origano secco e un pizzico di sale.\n7. Mescolare delicatamente e servire subito.",
-    "time": 10,
-    "difficulty": "Facile",
-    "servings": 4,
-    "tags": [
-      "fresca",
-      "vegetariana",
-      "senza cottura"
-    ],
-    "code": "insalata_greca"
-  },
-  {
     "name": "Pollo al Lime e Riso Venere",
     "type": "Secondo",
     "cuisine": "Moderna",
