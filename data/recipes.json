@@ -226,65 +226,6 @@
     "code": "pollo_tikka_masala"
   },
   {
-    "id": 6,
-    "name": "Panzanella",
-    "type": "Contorno",
-    "cuisine": "Italiana",
-    "ingredients": [
-      {
-        "name": "pane raffermo",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "pomodori maturi",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "cetriolo",
-        "amount": 1,
-        "unit": "n"
-      },
-      {
-        "name": "cipolla rossa",
-        "amount": 0.5,
-        "unit": "n"
-      },
-      {
-        "name": "basilico fresco",
-        "amount": 10,
-        "unit": "foglie"
-      },
-      {
-        "name": "capperi",
-        "amount": 2,
-        "unit": "cucchiai"
-      },
-      {
-        "name": "aceto di vino rosso",
-        "amount": 2,
-        "unit": "cucchiai"
-      },
-      {
-        "name": "olio d'oliva",
-        "amount": 4,
-        "unit": "cucchiai"
-      }
-    ],
-    "image": "images/panzanella.jpg",
-    "instructions": "1. Spezzare il pane a pezzi; tostarlo leggermente o lasciarlo raffermo una notte.\n2. Ammollare il pane in acqua per 10 minuti, poi strizzarlo bene.\n3. Tagliare pomodori e cetriolo; affettare finemente la cipolla.\n4. Unire tutte le verdure con i capperi e il pane.\n5. Condire con aceto di vino rosso e abbondante olio d'oliva.\n6. Aggiungere il basilico spezzato. Regolare di sale.\n7. Lasciare riposare 30 minuti prima di servire — il sapore migliora.",
-    "time": 20,
-    "difficulty": "Facile",
-    "servings": 4,
-    "tags": [
-      "vegetariana",
-      "estiva",
-      "italiana"
-    ],
-    "code": "panzanella"
-  },
-  {
     "name": "Pollo al Lime e Riso Venere",
     "type": "Secondo",
     "cuisine": "Moderna",
