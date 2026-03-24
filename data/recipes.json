@@ -1,49 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Spaghetti alla Carbonara",
-    "type": "Primo",
-    "cuisine": "Italiana",
-    "ingredients": [
-      {
-        "name": "spaghetti",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "uova",
-        "amount": 3,
-        "unit": "n"
-      },
-      {
-        "name": "pancetta",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "pecorino romano",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "pepe nero",
-        "amount": 1,
-        "unit": "pizzico"
-      }
-    ],
-    "image": "images/carbonara.jpg",
-    "instructions": "1. Portare a ebollizione abbondante acqua salata e cuocere gli spaghetti al dente.\n2. Rosolare la pancetta in padella finché croccante. Togliere dal fuoco.\n3. Sbattere le uova con il pecorino grattugiato e abbondante pepe nero.\n4. Scolare la pasta tenendo da parte un mestolo di acqua di cottura.\n5. Mantecare la pasta calda con la pancetta (fuori fuoco), aggiungere il composto di uova mescolando velocemente.\n6. Aggiungere l'acqua di cottura poco alla volta fino a ottenere una crema.\n7. Servire immediatamente con altro pecorino e pepe.",
-    "time": 20,
-    "difficulty": "Media",
-    "servings": 2,
-    "tags": [
-      "pasta",
-      "classica",
-      "veloce"
-    ],
-    "code": "spaghetti_alla_carbonara"
-  },
-  {
     "id": 2,
     "name": "Insalata Greca",
     "type": "Contorno",
