@@ -333,59 +333,6 @@
     ]
   },
   {
-    "name": "Pasta al pomodoro con aglio e cipolla",
-    "type": "Primo",
-    "cuisine": "Italiana",
-    "ingredients": [
-      {
-        "name": "Pasta",
-        "amount": 320,
-        "unit": "g"
-      },
-      {
-        "name": "Passata di pomodoro",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "Aglio",
-        "amount": 2,
-        "unit": "spicchi"
-      },
-      {
-        "name": "Cipolla",
-        "amount": 1,
-        "unit": "n"
-      },
-      {
-        "name": "Olio extra vergine d'oliva",
-        "amount": 2,
-        "unit": "cucchiai"
-      },
-      {
-        "name": "Sale",
-        "amount": 1,
-        "unit": "pizzico"
-      },
-      {
-        "name": "Basilico fresco",
-        "amount": 4,
-        "unit": "foglie"
-      }
-    ],
-    "instructions": "1. Tritare finemente la cipolla e l'aglio. In una padella capiente, scaldare l'olio d'oliva a fuoco medio. Aggiungere la cipolla e l'aglio tritati e soffriggere per 5-7 minuti, finché non saranno morbidi e trasparenti.\n2. Aggiungere la passata di pomodoro, un pizzico di sale e mescolare bene. Portare a ebollizione, poi ridurre la fiamma al minimo, coprire e lasciare sobbollire per almeno 20 minuti, mescolando occasionalmente.\n3. Nel frattempo, portare a ebollizione abbondante acqua salata in una pentola grande. Cuocere la pasta secondo le istruzioni sulla confezione fino a quando sarà al dente.\n4. Scolare la pasta, conservando un mestolino di acqua di cottura. Trasferire la pasta direttamente nella padella con il sugo di pomodoro.\n5. Aggiungere qualche foglia di basilico fresco e, se necessario, un po' dell'acqua di cottura della pasta per amalgamare bene il tutto. Saltare la pasta nel sugo per un minuto.\n6. Servire immediatamente.",
-    "time": 30,
-    "difficulty": "Facile",
-    "servings": 4,
-    "tags": [
-      "Pasta",
-      "Pomodoro",
-      "Vegetariano"
-    ],
-    "image": "",
-    "id": 7
-  },
-  {
     "name": "Pollo al Lime e Riso Venere",
     "type": "Secondo",
     "cuisine": "Moderna",
