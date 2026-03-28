@@ -1019,5 +1019,64 @@
       "griglia"
     ],
     "id": 23
+  },
+  {
+    "name": "Banana Bread",
+    "code": "banana_bread",
+    "type": "Dolce",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "banane mature",
+        "amount": 3,
+        "unit": "n"
+      },
+      {
+        "name": "burro fuso",
+        "amount": 76,
+        "unit": "g"
+      },
+      {
+        "name": "bicarbonato di sodio",
+        "amount": 0.5,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "zucchero",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "uovo grande sbattuto",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "estratto di vaniglia",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "farina 00",
+        "amount": 205,
+        "unit": "g"
+      }
+    ],
+    "instructions": "1. Preriscaldare il forno a 175°C. Imburrare una teglia da plumcake da 20x10 cm.\n2. In una ciotola, schiacciare le banane mature con una forchetta fino a renderle completamente lisce. Incorporare il burro fuso alle banane schiacciate.\n3. Aggiungere il bicarbonato di sodio e il sale. Incorporare lo zucchero, l'uovo sbattuto e l'estratto di vaniglia. Infine, aggiungere la farina e mescolare.\n4. Versare l'impasto nella teglia da plumcake preparata.\n5. Cuocere per 55-65 minuti a 175°C, o finché uno stuzzicadenti inserito al centro non esce pulito. Se l'esterno del plumcake è dorato ma il centro è ancora umido, coprire leggermente il plumcake con un foglio di alluminio e continuare la cottura fino a quando non sarà completamente cotto.\n6. Togliere dal forno e lasciare raffreddare nella teglia per qualche minuto. Quindi togliere il banana bread dalla teglia e lasciare raffreddare completamente prima di servire. Affettare e servire.",
+    "time": 70,
+    "difficulty": "Facile",
+    "servings": 8,
+    "tags": [
+      "banana bread",
+      "dolce",
+      "colazione"
+    ],
+    "image": "",
+    "id": 24
   }
 ]
