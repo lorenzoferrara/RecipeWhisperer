@@ -16,6 +16,7 @@ function emojiFor(type) { return TYPE_EMOJI[type] || '🍽'; }
 /* ─── DOM REFS ───────────────────────────────────────────── */
 const grid        = document.getElementById('recipe-grid');
 const emptyState  = document.getElementById('empty-state');
+const typeTabs    = document.getElementById('type-tabs');
 const searchInput = document.getElementById('search-input');
 const typeSelect  = document.getElementById('type-select');
 const cuisineSelect = document.getElementById('cuisine-select');
@@ -30,6 +31,26 @@ const modalMeta   = document.getElementById('modal-meta');
 const modalTitle  = document.getElementById('modal-title');
 const modalIngredients = document.getElementById('modal-ingredients');
 const modalInstructions = document.getElementById('modal-instructions');
+
+const TYPE_LABEL_MAP = {
+  'Main Dish': 'Secondo',
+  'Appetizer': 'Antipasto',
+  'Dessert': 'Dolce',
+  'Breakfast': 'Colazione',
+  'Soup': 'Zuppa',
+  'Salad': 'Insalata',
+};
+
+const TYPE_ORDER = [
+  'Antipasto',
+  'Primo',
+  'Secondo',
+  'Contorno',
+  'Insalata',
+  'Zuppa',
+  'Colazione',
+  'Dolce',
+];
 
 /* ─── INIT ───────────────────────────────────────────────── */
 async function init() {
@@ -48,12 +69,25 @@ async function init() {
 
 /* ─── POPULATE FILTER DROPDOWNS ─────────────────────────── */
 function populateFilters() {
-  const types    = [...new Set(allRecipes.map(r => r.type))].sort();
+  const types    = [...new Set(allRecipes.map(r => r.type))].sort((a, b) => {
+    const aLabel = typeLabel(a);
+    const bLabel = typeLabel(b);
+    const aIndex = TYPE_ORDER.indexOf(aLabel);
+    const bIndex = TYPE_ORDER.indexOf(bLabel);
+
+    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+    if (aIndex !== -1) return -1;
+    if (bIndex !== -1) return 1;
+    return aLabel.localeCompare(bLabel, 'it');
+  });
   const cuisines = [...new Set(allRecipes.map(r => r.cuisine))].sort();
+
+  renderTypeTabs(types);
 
   types.forEach(t => {
     const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
+    opt.value = t;
+    opt.textContent = typeLabel(t);
     typeSelect.appendChild(opt);
   });
 
@@ -61,6 +95,44 @@ function populateFilters() {
     const opt = document.createElement('option');
     opt.value = c; opt.textContent = c;
     cuisineSelect.appendChild(opt);
+  });
+}
+
+function typeLabel(type) {
+  return TYPE_LABEL_MAP[type] || type;
+}
+
+function renderTypeTabs(types) {
+  if (!typeTabs) return;
+
+  typeTabs.innerHTML = '';
+
+  const makeTab = (value, label) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'dish-tab';
+    btn.dataset.value = value;
+    btn.textContent = label;
+    btn.addEventListener('click', () => {
+      typeSelect.value = value;
+      applyFilters();
+    });
+    return btn;
+  };
+
+  typeTabs.appendChild(makeTab('all', 'Tutti'));
+  types.forEach(type => typeTabs.appendChild(makeTab(type, typeLabel(type))));
+  syncTypeTabs();
+}
+
+function syncTypeTabs() {
+  if (!typeTabs) return;
+  const activeType = typeSelect.value;
+
+  typeTabs.querySelectorAll('.dish-tab').forEach(tab => {
+    const isActive = tab.dataset.value === activeType;
+    tab.classList.toggle('active', isActive);
+    tab.setAttribute('aria-pressed', String(isActive));
   });
 }
 
@@ -82,6 +154,7 @@ function applyFilters() {
 
   renderCards();
   updateCount();
+  syncTypeTabs();
 }
 
 function clearFilters() {

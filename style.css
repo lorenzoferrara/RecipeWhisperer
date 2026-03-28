@@ -74,6 +74,49 @@ header::before {
   text-transform: uppercase;
 }
 
+/* ── QUICK DISH TABS ─────────────────────────────────────── */
+.dish-tabs-wrap {
+  margin-bottom: 18px;
+}
+.dish-tabs-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px 2px 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(30,26,20,.24) transparent;
+}
+.dish-tabs-scroll::-webkit-scrollbar { height: 6px; }
+.dish-tabs-scroll::-webkit-scrollbar-track { background: transparent; }
+.dish-tabs-scroll::-webkit-scrollbar-thumb {
+  background: rgba(30,26,20,.24);
+  border-radius: 999px;
+}
+.dish-tab {
+  flex: 0 0 auto;
+  border: 1px solid rgba(30,26,20,.14);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-mid);
+  padding: 8px 15px;
+  font-size: .84rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.dish-tab:hover {
+  border-color: rgba(184,92,56,.45);
+  color: var(--terracotta);
+  transform: translateY(-1px);
+}
+.dish-tab.active {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+  box-shadow: 0 8px 22px rgba(30,26,20,.2);
+}
+
 /* ── PAGE LAYOUT ──────────────────────────────────────────── */
 .page-layout {
   display: flex;
@@ -427,6 +470,13 @@ main {
 
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 700px) {
+  .dish-tabs-wrap {
+    margin-bottom: 14px;
+  }
+  .dish-tab {
+    padding: 8px 13px;
+    font-size: .8rem;
+  }
   .page-layout {
     flex-direction: column;
     padding: 20px 16px 48px;

@@ -1,12 +1,12 @@
 # RecipeWhisperer
 
-RecipeWhisperer e una web app di ricette con bot Telegram integrato.
+RecipeWhisperer e una web app di ricette (React + Vite) con bot Telegram integrato.
 
 Il bot riceve ricette in linguaggio naturale, le struttura con Gemini e aggiorna automaticamente il file dati sul repository GitHub. Il frontend carica e mostra le ricette dal file JSON.
 
 ## Features
 
-- Catalogo ricette in frontend statico
+- Catalogo ricette in frontend React
 - Filtri per tipo/cucina e ricerca testuale
 - Bot Telegram con comandi per aggiungere, visualizzare ed eliminare ricette
 - Aggiornamento automatico del file `data/recipes.json` tramite GitHub API
@@ -14,9 +14,10 @@ Il bot riceve ricette in linguaggio naturale, le struttura con Gemini e aggiorna
 
 ## Struttura Progetto
 
-- `index.html` UI principale
-- `style.css` stile della pagina
-- `app.js` logica frontend e rendering ricette
+- `index.html` entry HTML Vite
+- `src/App.jsx` UI e logica React
+- `src/main.jsx` bootstrap React
+- `style.css` stile globale della pagina
 - `data/recipes.json` archivio ricette usato dal frontend
 - `api/bot.js` webhook Telegram (Vercel Serverless Function)
 - `scripts/serve.py` server locale per sviluppo frontend
@@ -25,6 +26,7 @@ Il bot riceve ricette in linguaggio naturale, le struttura con Gemini e aggiorna
 ## Requisiti
 
 - Python 3.11+
+- Node.js 18+
 - Account Telegram (bot gia creato)
 - API key Gemini
 - Repository GitHub con token di accesso per commit
@@ -34,19 +36,28 @@ Il bot riceve ricette in linguaggio naturale, le struttura con Gemini e aggiorna
 Dal root del progetto:
 
 ```bash
-python3 scripts/serve.py
+npm install
+npm run dev
 ```
 
 Apri poi:
 
 ```text
-http://localhost:8000
+http://localhost:5173
+
+In alternativa, puoi continuare a usare:
+
+```bash
+uv run scripts/serve.py
+```
+
+Questo comando avvia Vite con porta preferita `8000` (fallback `8001`).
 ```
 
 ## Deploy su Vercel
 
 1. Collega il repository a Vercel.
-2. Mantieni la root del progetto come output statico (config gia presente in `vercel.json`).
+2. Vercel esegue `npm run build` e pubblica la cartella `dist` (config in `vercel.json`).
 3. Configura le Environment Variables nel progetto Vercel.
 
 ## Environment Variables
@@ -78,6 +89,6 @@ Imposta queste variabili per la funzione serverless `api/bot.js`:
 
 ## Note
 
-- Il frontend carica i dati da `data/recipes.json`.
+- Il frontend React carica i dati da `data/recipes.json`.
 - Le immagini ricetta sono opzionali; in assenza viene mostrato un fallback grafico.
 - La funzione bot usa Markdown nei messaggi Telegram.

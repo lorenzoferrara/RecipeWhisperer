@@ -1,112 +1,75 @@
 #!/usr/bin/env python3
-"""
-Local dev server for La Cucina recipe site.
-Run from the project folder:  python3 scripts/serve.py
-Then open:                    http://localhost:8000
+"""Run the Vite React dev server for La Cucina.
 
-Stop server:
-- Same terminal: Ctrl+C
-- Different terminal:
-pgrep -fa scripts/serve.py
-kill <PID>
-kill -9 <PID>   # only if needed
-- By port (fallback):
-fuser -k 8000/tcp
-
+Usage:
+  uv run scripts/serve.py
 """
 
-import http.server
-import socketserver
+from __future__ import annotations
+
 import os
+import shutil
+import subprocess
 import sys
 
-PORT = 8000
 HOST = "localhost"
+PORT = 8000
 FALLBACK_PORT = 8001
 
 
-class ReusableTCPServer(socketserver.TCPServer):
-    allow_reuse_address = True
+def run_vite(port: int, project_root: str) -> int:
+    cmd = [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        HOST,
+        "--port",
+        str(port),
+        "--strictPort",
+    ]
+    return subprocess.run(cmd, cwd=project_root, check=False).returncode
 
 
-class Handler(http.server.SimpleHTTPRequestHandler):
-    # Suppress per-request log noise — comment out to see all requests
-    def log_message(self, format, *args):
-        pass
-
-    # Ignore client disconnects while streaming a response (common during dev refreshes).
-    def copyfile(self, source, outputfile):
-        try:
-            super().copyfile(source, outputfile)
-        except (BrokenPipeError, ConnectionResetError):
-            pass
-
-
-def create_server_with_fallback():
-    """Bind to PORT, or FALLBACK_PORT if PORT is already in use."""
-    try:
-        return ReusableTCPServer((HOST, PORT), Handler), PORT
-    except OSError as first_error:
-        if "Address already in use" not in str(first_error):
-            raise
-
-        try:
-            print(
-                f"⚠  Port {PORT} is already in use. Falling back to port {FALLBACK_PORT}."
-            )
-            return ReusableTCPServer((HOST, FALLBACK_PORT), Handler), FALLBACK_PORT
-        except OSError as second_error:
-            if "Address already in use" in str(second_error):
-                print(f"✗  Ports {PORT} and {FALLBACK_PORT} are already in use.")
-                print(
-                    "   Stop the other process(es) or change PORT/FALLBACK_PORT in scripts/serve.py."
-                )
-                sys.exit(1)
-            raise
-
-
-def main():
-    # Serve from project root (parent of the scripts/ directory)
+def main() -> None:
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
     os.chdir(project_root)
 
-    # Check that the key files are present
-    missing = [
-        f
-        for f in ("index.html", "style.css", "app.js", "data/recipes.json")
-        if not os.path.exists(f)
-    ]
-    if missing:
-        print(f"⚠  Missing files: {', '.join(missing)}")
-        print("   Make sure you're running this script from the project structure.")
+    if shutil.which("npm") is None:
+        print("✗ npm non trovato. Installa Node.js prima di avviare il frontend React.")
         sys.exit(1)
 
-    try:
-        httpd, active_port = create_server_with_fallback()
-        with httpd:
-            print()
-            print("  ✦  La Cucina — local dev server")
-            print(f"     Serving from: {project_root}")
-            print(f"     URL:          http://{HOST}:{active_port}")
-            print()
-            print("  Press Ctrl+C to stop.")
-            print(f"  Open in browser: http://{HOST}:{active_port}")
-            print()
-
-            httpd.serve_forever()
-
-    except OSError as e:
-        if "Address already in use" in str(e):
-            print(f"✗  Port {PORT} is already in use.")
-            print(
-                "   Either stop the other process, or change PORT in scripts/serve.py."
-            )
-        else:
-            print(f"✗  Server error: {e}")
+    if not os.path.exists("package.json"):
+        print("✗ package.json non trovato. La conversione React sembra incompleta.")
         sys.exit(1)
-    except KeyboardInterrupt:
+
+    print()
+    print("  ✦  La Cucina — React dev server")
+    print(f"     Serving from: {project_root}")
+    print(f"     Preferred URL: http://{HOST}:{PORT}")
+    print("  Press Ctrl+C to stop.")
+    print()
+
+    code = run_vite(PORT, project_root)
+    if code == 0:
+        return
+    if code == 130:
         print("\n  Server stopped. Goodbye!")
+        return
+
+    print(f"⚠  Port {PORT} unavailable. Retrying on {FALLBACK_PORT}.")
+    code = run_vite(FALLBACK_PORT, project_root)
+
+    if code == 0:
+        return
+    if code == 130:
+        print("\n  Server stopped. Goodbye!")
+        return
+
+    print("✗ Unable to start Vite dev server on both 8000 and 8001.")
+    sys.exit(code)
 
 
 if __name__ == "__main__":
