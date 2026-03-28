@@ -1,15 +1,3 @@
-Spaghetti alla Carbonara:
-  spaghetti_alla_carbonara
-Insalata Greca:
-  insalata_greca
-Tortino al Cioccolato Fondente:
-  tortino_al_cioccolato_fondente
-Toast all'Avocado:
-  toast_all_avocado
-Pollo Tikka Masala:
-  pollo_tikka_masala
-Panzanella:
-  panzanella
 Pollo al Lime e Riso Venere:
   pollo_al_lime_e_riso_venere
 Salmone in Crosta di Erbe e Asparagi (Low Carb):
@@ -26,8 +14,6 @@ Stinco di Maiale Glassato con Rosmarino e Senape + Verdure Arrosto:
   stinco_di_maiale_glassato
 Pollo Cremoso al Limone e Parmigiano con Spinaci Saltati:
   pollo_cremoso_al_limone
-Pollo Cremoso al Limone e Parmigiano con Spinaci Saltati:
-  pollo_cremoso_al_limone_2
 Salmone con Burro alle Erbe e Aglio + Fagiolini Croccanti:
   salmone_con_burro_alle_erbe
 Pasta alla Norma:
@@ -36,3 +22,13 @@ Torta allo yogurt bianco (con 1 uovo):
   torta_allo_yogurt_bianco_con_1
 Vellutata di cavolfiore e gamberetti:
   vellutata_di_cavolfiore
+Bowl di Pollo alla Greca:
+  bowl_di_pollo_alla_greca
+Salmone Mediterraneo con Spinaci e Olive, Pomodorini e Orzo:
+  salmone_mediterraneo_spinaci_orzo
+Spiedini di Manzo al Rosmarino con Zucca Arrosto e Salsa allo Yogurt e Aglio:
+  spiedini_manzo_rosmarino_zucca
+Banana Bread:
+  banana_bread
+Risotto Funghi e Salsiccia:
+  risotto_funghi_salsiccia

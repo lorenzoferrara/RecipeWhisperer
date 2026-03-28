@@ -105,11 +105,12 @@ function renderCards() {
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', `Apri ricetta: ${recipe.name}`);
 
-    // Try .png first, then .jpg
-    const imagePath = recipe.code ? `images/${recipe.code}.png` : null;
-    const imgHtml = imagePath
-      ? `<img src="${imagePath}" alt="${recipe.name}" loading="lazy"
-             onerror="this.src='images/${recipe.code}.jpg'; if(this.dataset.retried) this.parentNode.innerHTML='<div class=card-placeholder>${emojiFor(recipe.type)}</div>'; this.dataset.retried=true;" />`
+        // Prefer optimized web images, then fallback to original png.
+        const webImagePath = recipe.code ? `images/web/${recipe.code}.webp` : null;
+        const pngImagePath = recipe.code ? `images/${recipe.code}.png` : null;
+        const imgHtml = webImagePath
+          ? `<img src="${webImagePath}" alt="${recipe.name}" loading="lazy" decoding="async"
+            onerror="if(this.dataset.retried){this.parentNode.innerHTML='<div class=card-placeholder>${emojiFor(recipe.type)}</div>';}else{this.src='${pngImagePath}';this.dataset.retried='1';}" />`
       : `<div class="card-placeholder">${emojiFor(recipe.type)}</div>`;
 
     card.innerHTML = `
@@ -183,15 +184,17 @@ function formatQty(amount, unit) {
 
 function openModal(recipe) {
   // Image or emoji placeholder
-  const imagePath = recipe.code ? `images/${recipe.code}.png` : null;
-  if (imagePath) {
-    modalImg.src   = imagePath;
+  const webImagePath = recipe.code ? `images/web/${recipe.code}.webp` : null;
+  const pngImagePath = recipe.code ? `images/${recipe.code}.png` : null;
+  if (webImagePath) {
+    modalImg.src   = webImagePath;
     modalImg.alt   = recipe.name;
     modalImg.style.display = '';
     modalImg.onerror = () => {
-      // Try .jpg if .png fails
-      if (modalImg.src.endsWith('.png')) {
-        modalImg.src = `images/${recipe.code}.jpg`;
+      // Try original png if optimized web image fails.
+      if (!modalImg.dataset.retried) {
+        modalImg.src = pngImagePath;
+        modalImg.dataset.retried = '1';
       } else {
         // Both failed, show emoji
         modalImg.style.display = 'none';
@@ -271,6 +274,7 @@ function closeModal() {
   // Clean up any dynamic placeholder
   document.querySelector('.modal-placeholder')?.remove();
   modalImg.style.display = '';
+  delete modalImg.dataset.retried;
   modalImg.src = '';
 }
 

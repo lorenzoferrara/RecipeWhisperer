@@ -202,14 +202,12 @@ Il JSON deve avere esattamente questa struttura:
   "difficulty": "uno tra: Facile, Media, Difficile",
   "servings": "numero d servings",
   "tags": ["tag1", "tag2"],
-  "image": "",
   "notes": "eventuali note aggiuntive, varianti, suggerimenti o informazioni extra sulla ricetta (stringa vuota se non presenti)"
 }
 
 Unità di misura valide per "unit": g, kg, ml, l, n, pizzico, cucchiaio, cucchiai, cucchiaino, cucchiaini, fette, foglie, spicchi, cm.
 Usa "n" per elementi contabili senza unità (es. 2 uova → amount: 2, unit: "n").
 Non usare mai amount: 0. Se una quantità non è numerica (es. sale, pepe, olio), usa amount: 1 e unit: "pizzico".
-Il campo "image" lascialo sempre stringa vuota "".
 Tutti i testi devono essere in italiano.
 
 Ricetta da convertire:
