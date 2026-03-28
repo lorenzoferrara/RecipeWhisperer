@@ -16,7 +16,7 @@ Il bot riceve ricette in linguaggio naturale, le struttura con Gemini e aggiorna
 
 - `index.html` UI principale
 - `style.css` stile della pagina
-- `script.js` logica frontend e rendering ricette
+- `app.js` logica frontend e rendering ricette
 - `data/recipes.json` archivio ricette usato dal frontend
 - `api/bot.js` webhook Telegram (Vercel Serverless Function)
 - `scripts/serve.py` server locale per sviluppo frontend

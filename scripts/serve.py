@@ -35,7 +35,7 @@ def main():
     os.chdir(project_root)
 
     # Check that the key files are present
-    missing = [f for f in ("index.html", "style.css", "script.js", "data/recipes.json")
+    missing = [f for f in ("index.html", "style.css", "app.js", "data/recipes.json")
                if not os.path.exists(f)]
     if missing:
         print(f"⚠  Missing files: {', '.join(missing)}")
