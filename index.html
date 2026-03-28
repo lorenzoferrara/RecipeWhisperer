@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Cucina</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <meta name="theme-color" content="#5c3d2e" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -90,6 +96,10 @@
         <div class="modal-section">
           <h3>Preparazione</h3>
           <ol id="modal-instructions"></ol>
+        </div>
+        <div class="modal-section" id="modal-notes-section" hidden>
+          <h3>Note</h3>
+          <p id="modal-notes"></p>
         </div>
       </div>
     </div>

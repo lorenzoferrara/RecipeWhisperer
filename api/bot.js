@@ -202,7 +202,8 @@ Il JSON deve avere esattamente questa struttura:
   "difficulty": "uno tra: Facile, Media, Difficile",
   "servings": "numero d servings",
   "tags": ["tag1", "tag2"],
-  "image": ""
+  "image": "",
+  "notes": "eventuali note aggiuntive, varianti, suggerimenti o informazioni extra sulla ricetta (stringa vuota se non presenti)"
 }
 
 Unità di misura valide per "unit": g, kg, ml, l, n, pizzico, cucchiaio, cucchiai, cucchiaino, cucchiaini, fette, foglie, spicchi, cm.

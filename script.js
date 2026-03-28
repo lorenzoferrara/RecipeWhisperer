@@ -249,6 +249,17 @@ function openModal(recipe) {
   modalInstructions.innerHTML = steps
     .map(s => `<li>${escHtml(s.replace(/^\d+\.\s*/, ''))}</li>`).join('');
 
+  // Notes
+  const notesSection = document.getElementById('modal-notes-section');
+  const notesEl = document.getElementById('modal-notes');
+  if (recipe.notes && recipe.notes.trim()) {
+    notesEl.textContent = recipe.notes.trim();
+    notesSection.hidden = false;
+  } else {
+    notesEl.textContent = '';
+    notesSection.hidden = true;
+  }
+
   backdrop.hidden = false;
   document.body.style.overflow = 'hidden';
   modalClose.focus();
