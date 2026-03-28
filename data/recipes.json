@@ -1078,5 +1078,87 @@
     ],
     "image": "",
     "id": 24
+  },
+  {
+    "name": "Risotto Funghi e Salsiccia",
+    "code": "risotto_funghi_salsiccia",
+    "type": "Primo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "amount": 160,
+        "unit": "g"
+      },
+      {
+        "name": "Salsiccia di suino",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Funghi (Porcini o misti)",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "Brodo vegetale",
+        "amount": 750,
+        "unit": "ml"
+      },
+      {
+        "name": "Vino bianco secco",
+        "amount": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Burro",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Parmigiano Reggiano DOP",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Scalogno",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "Olio EVO",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Pepe nero",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Prezzemolo fresco",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Preparazione delle basi\nMantenete il brodo a leggero bollore costante. Pulite i funghi eliminando i residui di terra e affettateli regolarmente. Privata del budello, sgranate la salsiccia grossolanamente con le mani.\n2. Rosolatura e gestione dei grassi\nNel vostro tegame largo, scaldate un filo d'olio e rosolate la salsiccia a fiamma vivace finché non sarà ben dorata. Rimuovetela dal tegame e tenetela da parte, eliminando il grasso in eccesso ma lasciando il fondo bruno. Nello stesso tegame, saltate i funghi per 4-5 minuti con un pizzico di sale; una volta pronti, metteteli da parte con la salsiccia.\n3. Tostatura nel tegame svasato\nPulite velocemente il tegame con carta assorbente. Appassite lo scalogno con un filo d'olio, poi versate il riso. Grazie alla superficie ampia del tegame, i chicchi si disporranno in uno strato sottile: tostate per 2 minuti finché non saranno caldi e lucidi. Sfumate con il vino bianco e lasciate evaporare la parte alcolica.\n4. Cottura progressiva\nIniziate ad aggiungere il brodo bollente un mestolo alla volta. La forma svasata del tegame favorirà l'evaporazione controllata e il rilascio degli amidi. A metà cottura (circa 8 minuti), incorporate la salsiccia e i funghi precedentemente rosolati. Continuate aggiungendo brodo solo quando il precedente è stato quasi del tutto assorbito.\n5. La Mantecatura all'onda\nSpegnete il fuoco quando il riso è ancora bene al dente e la consistenza è leggermente fluida (\"all'onda\"). Unite il burro freddissimo e il Parmigiano. Grazie ai bordi medio-alti del tegame, effettuate dei movimenti decisi dal basso verso l'alto per incorporare aria e creare l'emulsione. Coprite e lasciate riposare per 90 secondi.",
+    "time": 30,
+    "difficulty": "Media",
+    "servings": "2",
+    "tags": [
+      "risotto",
+      "funghi",
+      "salsiccia",
+      "primo piatto",
+      "carne"
+    ],
+    "image": "",
+    "notes": "Il segreto di un grande risotto risiede nell'equilibrio tra sapori decisi e una consistenza impeccabile. Utilizzando un tegame largo dai bordi medio-alti, garantiremo una distribuzione del calore uniforme e una mantecatura all'onda da manuale.",
+    "id": 25
   }
 ]
