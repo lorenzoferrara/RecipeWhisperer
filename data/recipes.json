@@ -1158,5 +1158,83 @@
     ],
     "notes": "Il segreto di un grande risotto risiede nell'equilibrio tra sapori decisi e una consistenza impeccabile. Utilizzando un tegame largo dai bordi medio-alti, garantiremo una distribuzione del calore uniforme e una mantecatura all'onda da manuale.",
     "id": 25
+  },
+  {
+    "name": "Riso Saltato con Vitello, Broccoli e Peperoni",
+    "code": "riso_saltato_vitello_broccoli_peperoni",
+    "type": "Secondo",
+    "cuisine": "Asiatica",
+    "ingredients": [
+      {
+        "name": "Riso (già bollito, tipo Basmati o parboiled)",
+        "amount": 160,
+        "unit": "g"
+      },
+      {
+        "name": "Nodini di vitello (disossati e tagliati a straccetti)",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Cimette di broccoli",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Peperone rosso",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Salsa di soia",
+        "amount": 3,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "Brodo o acqua",
+        "amount": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Miele",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "Farina di mais o farina 00",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Olio",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Aglio",
+        "amount": 1,
+        "unit": "spicchi"
+      },
+      {
+        "name": "Pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Trattamento della Carne:\n   * Prendete gli straccetti di vitello e passateli nella farina di mais (per un effetto croccante) o nella farina 00 (per un effetto più legato e cremoso). Scuotete bene per eliminare l'eccesso.\n   * In un wok o padella ampia, scaldate l'olio e saltate il vitello a fiamma molto alta per 3 minuti. Quando è dorato, toglietelo e tenetelo da parte.\n2. Cottura delle Verdure:\n   * Nella stessa padella, aggiungete un filo d'olio e l'aglio.\n   * Unite i broccoli (cimette piccole) e i peperoni. Saltate a fuoco vivace per 5-6 minuti. Se i broccoli faticano a cuocere, aggiungete un cucchiaio d'acqua e coprite per 1 minuto, poi scoprite per far evaporare.\n3. Preparazione dell'Emulsione:\n   * In una ciotolina o in un piccolo barattolo, mescolate la salsa di soia, il brodo (o acqua) e il miele. Agitate bene finché il composto non è omogeneo.\n4. Assemblaggio e Finitura:\n   * Unite il riso freddo alle verdure in padella e saltate per 2 minuti a fiamma alta affinché i chicchi si tostino leggermente.\n   * Reincorporate il vitello.\n   * Versate l'emulsione sui bordi della padella (così si scalda subito) e saltate il tutto per l'ultimo minuto. La farina residua sulla carne, a contatto con i liquidi, creerà una velatura lucida.",
+    "time": 25,
+    "difficulty": "Facile",
+    "servings": "2",
+    "tags": [
+      "riso",
+      "vitello",
+      "broccoli",
+      "peperoni",
+      "saltato",
+      "wok",
+      "asiatica"
+    ],
+    "notes": "Sale: Non aggiungete sale fino alla fine; la salsa di soia è già molto sapida. Consistenza: Se avete usato la farina di mais sulla carne, servite immediatamente per godere del contrasto tra la crosticina del vitello e la morbidezza del riso.",
+    "id": 26
   }
 ]
