@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 SRC_DIR = Path("images") / "png"
-OUT_DIR = SRC_DIR
+OUT_DIR = SRC_DIR / "web"
 MAX_SIDE = 960
 QUALITY = 78
 
