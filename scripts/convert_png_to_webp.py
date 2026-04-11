@@ -2,7 +2,7 @@
 """Generate web-optimized WebP images for recipe cards and modal views.
 
 Usage:
-  uv run scripts/optimize_images.py
+  uv run scripts/convert_png_to_webp.py
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 SRC_DIR = Path("images") / "png"
-OUT_DIR = SRC_DIR / "web"
+OUT_DIR = SRC_DIR
 MAX_SIDE = 960
 QUALITY = 78
 
