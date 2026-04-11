@@ -1236,5 +1236,82 @@
     ],
     "notes": "Sale: Non aggiungete sale fino alla fine; la salsa di soia è già molto sapida. Consistenza: Se avete usato la farina di mais sulla carne, servite immediatamente per godere del contrasto tra la crosticina del vitello e la morbidezza del riso.",
     "id": 26
+  },
+  {
+    "name": "Quiche alle Patate, Melanzane e Pancetta Affumicata",
+    "code": "quiche_patate_melanzane_pancetta_affumicata",
+    "type": "Antipasto",
+    "cuisine": "Francese",
+    "ingredients": [
+      {
+        "name": "pasta brisée",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "patate",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "melanzana",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "pancetta affumicata",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Groviera",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "olio extravergine d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "uova",
+        "amount": 3,
+        "unit": "n"
+      },
+      {
+        "name": "panna fresca liquida",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "noce moscata",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Preparazione degli ortaggi: Pelate le patate, tagliatele a cubetti di circa 1 cm e sbollentatele in acqua salata per 5 minuti. Devono essere tenere ma ancora sode. Scolatele e tenetele da parte. Tagliate la melanzana a cubetti. In una padella antiaderente, scaldate un filo d'olio e saltate le melanzane finché non saranno dorate e ammorbidite. Salate leggermente a fine cottura.\n2. Cottura della pancetta: Nella stessa padella (senza aggiungere grassi), rosolate la pancetta finché non diventa croccante. Scolate il grasso in eccesso.\n3. Preparazione della base: Stendete la pasta brisée in una teglia da forno da 24 cm, bucherellate il fondo con i rebbi di una forchetta. Distribuite uniformemente le patate, le melanzane e la pancetta sul fondo della torta. Coprite con il formaggio grattugiato.\n4. Creazione del composto liquido: In una ciotola, sbattete le uova con la panna. Aggiungete pepe e una grattugiata di noce moscata. Prestate attenzione al sale: la pancetta e il formaggio sono già molto sapidi. Versate il composto sopra gli ingredienti nella teglia, assicurandovi che sia distribuito in modo omogeneo.\n5. Cottura: Infornate in forno statico preriscaldato a 180°C per circa 35-40 minuti. La quiche è pronta quando la superficie risulta ben dorata e il centro è solido al tatto.",
+    "time": 60,
+    "difficulty": "Media",
+    "servings": 6,
+    "tags": [
+      "quiche",
+      "patate",
+      "melanzane",
+      "pancetta",
+      "formaggio",
+      "torta salata"
+    ],
+    "notes": "Questa ricetta bilanciata per una quiche saporita è strutturata per armonizzare la dolcezza delle patate con la sapidità della pancetta e la consistenza della melanzana. Per questa preparazione, si consiglia l'utilizzo della Groviera o dell'Emmental. Questi formaggi fondono uniformemente senza rilasciare un'eccessiva quantità di grasso, offrendo una nota nocciolata che completa il profilo aromatico degli ortaggi.\nConsigli Tecnici:\nRiposo: Lasciate riposare la quiche per almeno 10-15 minuti prima di tagliarla; questo permette alla struttura interna di stabilizzarsi, garantendo fette nette e precise.\nVariante: Se preferite un sapore più intenso, potete sostituire la Groviera con del Provolone piccante.",
+    "id": 27
   }
 ]
