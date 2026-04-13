@@ -13,6 +13,12 @@ function maxCardsForViewport(width) {
   return 4;
 }
 
+function getViewportWidth() {
+  if (typeof window === 'undefined') return 1280;
+  if (window.visualViewport?.width) return window.visualViewport.width;
+  return window.innerWidth || 1280;
+}
+
 export default function App() {
   const [allRecipes, setAllRecipes] = useState([]);
   const [search, setSearch] = useState('');
@@ -23,7 +29,7 @@ export default function App() {
   const [loadError, setLoadError] = useState('');
   const [brokenCardImages, setBrokenCardImages] = useState(() => new Set());
   const [modalImageFailed, setModalImageFailed] = useState(false);
-  const [viewportWidth, setViewportWidth] = useState(() => window.innerWidth || 1280);
+  const [viewportWidth, setViewportWidth] = useState(() => getViewportWidth());
 
   useEffect(() => {
     let active = true;
@@ -68,10 +74,15 @@ export default function App() {
   }, [selectedRecipe]);
 
   useEffect(() => {
-    const onResize = () => setViewportWidth(window.innerWidth || 1280);
+    const onResize = () => setViewportWidth(getViewportWidth());
 
     window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    window.visualViewport?.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+      window.visualViewport?.removeEventListener('resize', onResize);
+    };
   }, []);
 
   const types = useMemo(
