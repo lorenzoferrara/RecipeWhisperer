@@ -11,6 +11,7 @@ export default function App() {
   const [search, setSearch] = useState('');
   const [selectedType, setSelectedType] = useState('all');
   const [selectedCuisine, setSelectedCuisine] = useState('all');
+  const [cardsPerRow, setCardsPerRow] = useState(3);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [loadError, setLoadError] = useState('');
   const [brokenCardImages, setBrokenCardImages] = useState(() => new Set());
@@ -123,9 +124,11 @@ export default function App() {
           types={types}
           cuisines={cuisines}
           resultsCount={resultsCount}
+          cardsPerRow={cardsPerRow}
           onSearchChange={setSearch}
           onTypeChange={setSelectedType}
           onCuisineChange={setSelectedCuisine}
+          onCardsPerRowChange={setCardsPerRow}
           onClearFilters={clearFilters}
         />
 
@@ -135,7 +138,11 @@ export default function App() {
           {loadError ? (
             <p style={{ color: '#b85c38', padding: '24px' }}>{loadError}</p>
           ) : (
-            <div className="recipe-grid" id="recipe-grid">
+            <div
+              className="recipe-grid"
+              id="recipe-grid"
+              style={{ '--cards-per-row': cardsPerRow }}
+            >
               {filtered.map((recipe, i) => (
                 <RecipeCard
                   key={recipe.id}

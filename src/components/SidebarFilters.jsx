@@ -7,9 +7,11 @@ export default function SidebarFilters({
   types,
   cuisines,
   resultsCount,
+  cardsPerRow,
   onSearchChange,
   onTypeChange,
   onCuisineChange,
+  onCardsPerRowChange,
   onClearFilters,
 }) {
   return (
@@ -53,6 +55,20 @@ export default function SidebarFilters({
               {cuisine}
             </option>
           ))}
+        </select>
+      </div>
+
+      <div className="filter-group">
+        <label htmlFor="rows-select">Ricette per riga</label>
+        <select
+          id="rows-select"
+          value={cardsPerRow}
+          onChange={(e) => onCardsPerRowChange(Number(e.target.value))}
+        >
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+          <option value={5}>5</option>
         </select>
       </div>
 
