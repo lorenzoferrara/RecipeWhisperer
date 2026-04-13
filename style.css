@@ -366,10 +366,9 @@ main {
   to   { opacity: 1; transform: translateY(0); }
 }
 .modal-close {
-  position: sticky;
+  position: absolute;
   top: 14px;
-  float: right;
-  margin: 14px 14px 0 0;
+  right: 14px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -389,6 +388,7 @@ main {
   overflow: hidden;
   background: var(--paper);
   max-width: 100%;
+  width: 100%;
 }
 .modal-image-wrap img {
   width: 100%;

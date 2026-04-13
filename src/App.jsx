@@ -7,7 +7,7 @@ import TypeTabs from './components/TypeTabs.jsx';
 import { sortTypes } from './utils/recipeUtils.js';
 
 function maxCardsForViewport(width) {
-  if (width < 700) return 1;
+  if (width < 320) return 1;
   if (width < 980) return 2;
   if (width < 1280) return 3;
   return 4;
