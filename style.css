@@ -498,6 +498,25 @@ main {
     width: calc(100vw - 16px);
     width: calc(100dvw - 16px);
   }
+  .recipe-grid {
+    gap: 14px;
+  }
+  .card-body {
+    padding: 14px 14px 16px;
+  }
+  .card-cuisine {
+    font-size: .65rem;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 1rem;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .card-meta {
+    gap: 8px;
+    font-size: .72rem;
+  }
   .dish-tabs-wrap {
     margin-bottom: 14px;
   }
@@ -523,6 +542,16 @@ main {
   .clear-btn { flex: 0 0 auto; align-self: flex-end; width: auto; }
   .results-count { width: 100%; }
   .modal-body { padding: 20px 20px 28px; }
+}
+
+@media (max-width: 420px) {
+  .card-title {
+    font-size: .94rem;
+  }
+  .card-meta {
+    font-size: .68rem;
+    gap: 6px;
+  }
 }
 
 /* ── SCROLLBAR ────────────────────────────────────────────── */
