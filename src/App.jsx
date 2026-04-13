@@ -6,6 +6,13 @@ import SidebarFilters from './components/SidebarFilters.jsx';
 import TypeTabs from './components/TypeTabs.jsx';
 import { sortTypes } from './utils/recipeUtils.js';
 
+function maxCardsForViewport(width) {
+  if (width < 700) return 1;
+  if (width < 980) return 2;
+  if (width < 1280) return 3;
+  return 4;
+}
+
 export default function App() {
   const [allRecipes, setAllRecipes] = useState([]);
   const [search, setSearch] = useState('');
@@ -16,6 +23,7 @@ export default function App() {
   const [loadError, setLoadError] = useState('');
   const [brokenCardImages, setBrokenCardImages] = useState(() => new Set());
   const [modalImageFailed, setModalImageFailed] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(() => window.innerWidth || 1280);
 
   useEffect(() => {
     let active = true;
@@ -59,6 +67,13 @@ export default function App() {
     };
   }, [selectedRecipe]);
 
+  useEffect(() => {
+    const onResize = () => setViewportWidth(window.innerWidth || 1280);
+
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   const types = useMemo(
     () => [...new Set(allRecipes.map((r) => r.type))].sort(sortTypes),
     [allRecipes]
@@ -92,6 +107,8 @@ export default function App() {
     filtered.length === allRecipes.length
       ? `Tutte le ${allRecipes.length} ricette`
       : `${filtered.length} di ${allRecipes.length} ricette`;
+
+  const effectiveCardsPerRow = Math.min(cardsPerRow, maxCardsForViewport(viewportWidth));
 
   function clearFilters() {
     setSearch('');
@@ -141,7 +158,7 @@ export default function App() {
             <div
               className="recipe-grid"
               id="recipe-grid"
-              style={{ '--cards-per-row': cardsPerRow }}
+              style={{ '--cards-per-row': effectiveCardsPerRow }}
             >
               {filtered.map((recipe, i) => (
                 <RecipeCard

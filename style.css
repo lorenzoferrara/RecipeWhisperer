@@ -211,12 +211,20 @@ header::before {
 main {
   flex: 1;
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(var(--cards-per-row, 3), minmax(0, 1fr));
   gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  max-width: 100vw;
+  max-width: 100dvw;
+  overflow-x: clip;
 }
+.recipe-grid > * { min-width: 0; }
 
 /* ── RECIPE CARD ──────────────────────────────────────────── */
 .recipe-card {
