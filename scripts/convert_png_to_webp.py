@@ -2,7 +2,7 @@
 """Generate web-optimized WebP images for recipe cards and modal views.
 
 Usage:
-  uv run scripts/optimize_images.py
+  uv run scripts/convert_png_to_webp.py
 """
 
 from __future__ import annotations

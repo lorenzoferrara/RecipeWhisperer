@@ -1,8 +1,8 @@
 // api/bot.js — Vercel Serverless Function
 // Receives Telegram webhook, calls Gemini, commits to GitHub
 
-const fs = require('fs');
-const path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
 
 const TELEGRAM_TOKEN  = process.env.TELEGRAM_TOKEN;
 const GEMINI_API_KEY  = process.env.GEMINI_API_KEY;
