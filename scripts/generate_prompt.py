@@ -40,7 +40,7 @@ Filename: {recipe_code}.png
 def has_image(recipe_code):
     """Check if image exists in images/ for this recipe code"""
     for ext in ['.png', '.jpg', '.jpeg', '.webp', '.gif']:
-        if (IMAGES_DIR / f"{recipe_code}{ext}").exists():
+        if (IMAGES_DIR / "web" / f"{recipe_code}{ext}").exists():
             return True
     return False
 

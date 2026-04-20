@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 SRC_DIR = Path("images") / "png"
-OUT_DIR = SRC_DIR / "web"
+OUT_DIR = Path("images") / "web"
 MAX_SIDE = 960
 QUALITY = 78
 
@@ -61,6 +61,7 @@ def main() -> None:
         total_dst += dst_size
         optimized += 1
         print(f"{src.name} -> web/{dst.name}")
+        src.unlink()  # Delete original PNG after successful conversion
 
     total_saved = total_src - total_dst
     pct = (total_saved / total_src * 100) if total_src else 0
