@@ -1406,5 +1406,152 @@
     ],
     "notes": "Sale leggero: feta e olive sono già sapide.\nSe vuoi più freschezza: aggiungi prezzemolo o menta.\nSi conserva 1–2 giorni in frigo (meglio aggiungere l’insalata fresca al momento).\nVarianti facoltative per il dressing: scorza di limone, origano/timo, 1/2 spicchio d’aglio grattugiato.",
     "id": 28
+  },
+  {
+    "name": "Tacos “al pastor” con stinco",
+    "code": "tacos_al_pastor_con_stinco",
+    "type": "Secondo",
+    "cuisine": "Messicana",
+    "ingredients": [
+      {
+        "name": "stinco di maiale precotto",
+        "amount": 1.1,
+        "unit": "kg"
+      },
+      {
+        "name": "ananas a cubetti",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla bianca",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "aglio",
+        "amount": 2,
+        "unit": "spicchi"
+      },
+      {
+        "name": "cumino",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "origano",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "paprika affumicata",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "aceto (di mele o bianco)",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "succo d'ananas",
+        "amount": 2.5,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "achiote",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "olio",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "tortillas di mais",
+        "amount": 9,
+        "unit": "n"
+      },
+      {
+        "name": "pomodori",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla rossa (per tacos)",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "coriandolo fresco tritato",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "lime (per spicchi)",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "salsa piccante pronta",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "avocado maturi",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "succo di lime",
+        "amount": 0.75,
+        "unit": "n"
+      },
+      {
+        "name": "cipolla rossa (per guacamole)",
+        "amount": 0.25,
+        "unit": "n"
+      },
+      {
+        "name": "sale (per guacamole)",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "coriandolo (per guacamole)",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "peperoncino fresco",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Rigenerazione stinco: Forno secondo confezione (indicativamente 180–200 °C per 25–40 min). Riposa 5–10 min, disossa e sfilaccia.\n2. Finitura “al pastor-style”: Padella molto calda con poco olio. Rosola cipolla bianca e aglio 1–2 min. Aggiungi la carne e falla croccare (lasciala ferma all’inizio). Aggiungi cumino, origano, paprika (e achiote). Sfuma con aceto + succo d’ananas. Unisci l’ananas a cubetti e caramella 2–3 min.\n3. Guacamole: Schiaccia avocado + lime + sale, aggiungi cipolla (e coriandolo se vuoi).\n4. Assemblaggio: Scalda le tortillas. Carne calda. Pomodoro + cipolla rossa + coriandolo. Un cucchiaio di guacamole. Salsa piccante pronta a piacere. Spremuta di lime finale.",
+    "time": 60,
+    "difficulty": "Media",
+    "servings": "4",
+    "tags": [
+      "tacos",
+      "maiale",
+      "messicana",
+      "stinco",
+      "guacamole",
+      "piccante"
+    ],
+    "notes": "Assaggia la carne prima di salare: lo stinco precotto è già sapido. Non esagerare con guacamole e salsa: coprono facilmente il sapore della carne. Versione più autentica “street”: togli il pomodoro, lascia cipolla + coriandolo + ananas + salsa.",
+    "id": 29
   }
 ]
