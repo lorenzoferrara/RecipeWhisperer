@@ -4,7 +4,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RECIPES_FILE = REPO_ROOT / "data" / "recipes.json"
 IMAGES_DIR = REPO_ROOT / "images"
-PROMPTS_FILE = REPO_ROOT / "data" / "prompts.txt"
+PROMPTS_FILE = Path(__file__).resolve().parent / "prompts.txt"
 
 def build_image_prompt(recipe):
     name = recipe['name']

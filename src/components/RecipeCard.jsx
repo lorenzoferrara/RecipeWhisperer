@@ -34,11 +34,11 @@ export default function RecipeCard({ recipe, index, onOpen, imageBroken, onImage
     >
       <div className="card-image-wrap">
         {renderCardImage()}
-        <span className="card-badge">{recipe.type}</span>
       </div>
       <div className="card-body">
-        <p className="card-cuisine">{recipe.cuisine}</p>
         <h2 className="card-title">{recipe.name}</h2>
+        <p className="card-cuisine">{recipe.cuisine}</p>
+        <span className="card-badge">{recipe.type}</span>
         <div className="card-meta">
           {recipe.time ? <span>⏱ {recipe.time} min</span> : null}
           {recipe.servings ? <span>👤 {recipe.servings} pers.</span> : null}

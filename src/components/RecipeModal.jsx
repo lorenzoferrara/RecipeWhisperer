@@ -29,18 +29,17 @@ export default function RecipeModal({ recipe, modalImageFailed, onImageError, on
           ✕
         </button>
         <div className="modal-image-wrap">{renderModalImage()}</div>
-        <div className="modal-badges" id="modal-badges">
-          <span className="modal-badge terracotta">{recipe.type}</span>
-          <span className="modal-badge">{recipe.cuisine}</span>
-        </div>
         <div className="modal-body">
+          <h2 id="modal-title">{recipe.name}</h2>
+          <div className="modal-badges" id="modal-badges">
+            <span className="modal-badge terracotta">{recipe.type}</span>
+            <span className="modal-badge">{recipe.cuisine}</span>
+          </div>
           <div className="modal-meta" id="modal-meta">
             {recipe.time ? <span>⏱ {recipe.time} min</span> : null}
             {recipe.servings ? <span>👤 {recipe.servings} persone</span> : null}
             {recipe.difficulty ? <span>◈ {recipe.difficulty}</span> : null}
           </div>
-
-          <h2 id="modal-title">{recipe.name}</h2>
 
           <div className="modal-section">
             <h3>Ingredienti</h3>
