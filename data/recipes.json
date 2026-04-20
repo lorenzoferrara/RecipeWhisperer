@@ -1313,5 +1313,98 @@
     ],
     "notes": "Questa ricetta bilanciata per una quiche saporita è strutturata per armonizzare la dolcezza delle patate con la sapidità della pancetta e la consistenza della melanzana. Per questa preparazione, si consiglia l'utilizzo della Groviera o dell'Emmental. Questi formaggi fondono uniformemente senza rilasciare un'eccessiva quantità di grasso, offrendo una nota nocciolata che completa il profilo aromatico degli ortaggi.\nConsigli Tecnici:\nRiposo: Lasciate riposare la quiche per almeno 10-15 minuti prima di tagliarla; questo permette alla struttura interna di stabilizzarsi, garantendo fette nette e precise.\nVariante: Se preferite un sapore più intenso, potete sostituire la Groviera con del Provolone piccante.",
     "id": 27
+  },
+  {
+    "name": "Insalata di farro con ceci, tonno e feta",
+    "code": "insalata_farro_ceci_tonno_feta",
+    "type": "Primo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "Farro",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Ceci cotti (sgocciolati)",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Tonno sgocciolato",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "Feta",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "Pomodorini",
+        "amount": 10,
+        "unit": "n"
+      },
+      {
+        "name": "Cetriolo",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "Olive nere",
+        "amount": 10,
+        "unit": "n"
+      },
+      {
+        "name": "Insalata (lattughino o rucola)",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Olio extravergine",
+        "amount": 3,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "Miele",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Succo di limone (oppure aceto di vino bianco/mela)",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Senape",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Cuoci il farro in acqua salata, scolalo e lascialo raffreddare.\n2. Taglia pomodorini, cetriolo e feta; scola ceci e tonno.\n3. In una ciotola grande unisci farro, ceci, tonno, verdure, olive e insalata.\n4. Emulsiona il dressing (mescola energicamente tutti gli ingredienti).\n5. Versa il dressing, mescola bene e lascia riposare 10 minuti prima di servire.",
+    "time": 30,
+    "difficulty": "Facile",
+    "servings": 2,
+    "tags": [
+      "insalata",
+      "farro",
+      "ceci",
+      "tonno",
+      "feta",
+      "estiva",
+      "piatto unico"
+    ],
+    "notes": "Sale leggero: feta e olive sono già sapide.\nSe vuoi più freschezza: aggiungi prezzemolo o menta.\nSi conserva 1–2 giorni in frigo (meglio aggiungere l’insalata fresca al momento).\nVarianti facoltative per il dressing: scorza di limone, origano/timo, 1/2 spicchio d’aglio grattugiato.",
+    "id": 28
   }
 ]
