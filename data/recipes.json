@@ -1553,5 +1553,82 @@
     ],
     "notes": "Assaggia la carne prima di salare: lo stinco precotto è già sapido. Non esagerare con guacamole e salsa: coprono facilmente il sapore della carne. Versione più autentica “street”: togli il pomodoro, lascia cipolla + coriandolo + ananas + salsa.",
     "id": 29
+  },
+  {
+    "name": "Vellutata di Funghi e Patate con Pancetta, Crostini e Prezzemolo",
+    "code": "vellutata_funghi_patate_pancetta",
+    "type": "Zuppa",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "funghi (champignon o misti)",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "patate",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "pancetta (a cubetti o striscioline)",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "crostini di pane",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "prezzemolo fresco",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "brodo vegetale",
+        "amount": 750,
+        "unit": "ml"
+      },
+      {
+        "name": "cipolla",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "olio extravergine d’oliva",
+        "amount": 2,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Pepe",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "panna da cucina o latte",
+        "amount": 2,
+        "unit": "cucchiai"
+      }
+    ],
+    "instructions": "1. Pulisci i funghi con un panno umido e affettali. Pela le patate e tagliale a cubetti piccoli per velocizzare la cottura. Trita finemente la cipolla e, separatamente, il prezzemolo fresco.\n2. In una pentola capiente, scalda l’olio e rosola la cipolla. Unisci i funghi e le patate, lasciandoli insaporire per 5 minuti. Copri con il brodo caldo e prosegui la cottura per circa 20 minuti a fuoco medio.\n3. Mentre la zuppa cuoce, rosola la pancetta in una padella antiaderente fino a renderla croccante. Rimuovila e, nella stessa padella, tosta i crostini finché non saranno dorati.\n4. Frulla il composto con un frullatore a immersione fino a ottenere una crema omogenea. Se desiderato, aggiungi panna o latte per rifinire la consistenza. Regola di sale e pepe.\n5. Versa la vellutata nei piatti fondi. Guarnisci ogni porzione con: La pancetta croccante. I crostini dorati. Un’abbondante spolverata di prezzemolo fresco tritato. Un filo d'olio a crudo.",
+    "time": 40,
+    "difficulty": "Media",
+    "servings": "4",
+    "tags": [
+      "vellutata",
+      "funghi",
+      "patate",
+      "pancetta",
+      "zuppa",
+      "invernale"
+    ],
+    "notes": "Il prezzemolo va aggiunto rigorosamente a crudo e al momento del servizio; questo permette di preservarne il colore vivido e l'aroma fresco, che contrasta idealmente con la sapidità della pancetta e la dolcezza delle patate.",
+    "id": 30
   }
 ]
