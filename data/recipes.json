@@ -1630,5 +1630,111 @@
     ],
     "notes": "Il prezzemolo va aggiunto rigorosamente a crudo e al momento del servizio; questo permette di preservarne il colore vivido e l'aroma fresco, che contrasta idealmente con la sapidità della pancetta e la dolcezza delle patate.",
     "id": 30
+  },
+  {
+    "name": "Couscous con pollo e verdure speziate",
+    "code": "couscous_pollo_verdure_speziate",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "Couscous",
+        "amount": 170,
+        "unit": "g"
+      },
+      {
+        "name": "Pollo",
+        "amount": 275,
+        "unit": "g"
+      },
+      {
+        "name": "Melanzana",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Carote",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Pomodori grandi",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Cipolla",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Aglio",
+        "amount": 1,
+        "unit": "spicchi"
+      },
+      {
+        "name": "Prezzemolo",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Olio extravergine",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Burro",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Paprika",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "Cumino",
+        "amount": 0.5,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "Curcuma",
+        "amount": 0.5,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "Pepe nero",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Cannella",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Limone",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Taglia la melanzana a cubi grandi (2–3 cm). Scalda bene una padella con olio. Cuoci a fuoco medio-alto senza muoverla troppo finché non è dorata su più lati, poi toglila e mettila da parte.\n2. Trita la cipolla fine. Scalda olio in padella e aggiungila. Dopo 3–4 minuti, aggiungi aglio tritato finissimo o schiacciato. Cuoci a fuoco medio, non deve bruciare.\n3. Taglia il pollo a cubi di circa 2 cm. Aggiungilo in padella. Lascialo fermo all’inizio per 1–2 minuti per fare la crosticina, poi giralo e completa la rosolatura.\n4. Aggiungi paprika, cumino, curcuma, pepe (e cannella se la usi). Mescola per 30–40 secondi per attivare gli aromi.\n5. Taglia le carote a rondelle sottili (3–4 mm) o mezzelune. Taglia i pomodori a metà, rimuovi parte dei semi/acqua, poi a pezzi grossolani (2–3 cm). Aggiungi carote e pomodori in padella. Sala leggermente. Cuoci 10–15 minuti finché i pomodori non diventano un sugo morbido, non acquoso. A metà cottura, rimetti dentro la melanzana. Se serve, aggiungi solo un piccolo goccio d’acqua.\n6. Porta a bollore acqua o brodo (stesso peso del couscous). Versa sul couscous, copri e lascia per 5 minuti. Sgrana con una forchetta. Aggiungi una noce di burro e un filo d’olio.\n7. Unisci couscous e condimento (o servi sopra). Trita il prezzemolo fine e aggiungilo alla fine. (Opzionale ma consigliato: qualche goccia di limone).",
+    "time": 55,
+    "difficulty": "Media",
+    "servings": "3",
+    "tags": [
+      "Couscous",
+      "Pollo",
+      "Verdure",
+      "Speziato",
+      "Piatto unico"
+    ],
+    "notes": "Risultato corretto: Verdure distinte, non sfatte. Pollo rosolato, non bollito. Couscous sgranato. Fondo cremoso ma asciutto.",
+    "id": 31
   }
 ]
