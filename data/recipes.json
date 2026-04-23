@@ -1736,5 +1736,81 @@
     ],
     "notes": "Risultato corretto: Verdure distinte, non sfatte. Pollo rosolato, non bollito. Couscous sgranato. Fondo cremoso ma asciutto.",
     "id": 31
+  },
+  {
+    "name": "Risotto agli Asparagi e Zafferano",
+    "code": "risotto_asparagi_zafferano",
+    "type": "Primo",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli o Arborio",
+        "amount": 450,
+        "unit": "g"
+      },
+      {
+        "name": "Asparagi freschi",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "Zafferano",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "Brodo Vegetale",
+        "amount": 1.5,
+        "unit": "l"
+      },
+      {
+        "name": "Vino Bianco secco",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Scalogno",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Olio Extravergine d’Oliva",
+        "amount": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "Lievito Alimentare in scaglie",
+        "amount": 3,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "Limone biologico",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Pepe Nero",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Preparazione degli Asparagi: Lavate gli asparagi e rimuovete la base legnosa. Separate le punte (i primi 4 cm) dai gambi. Tagliate i gambi a rondelle sottili. In una padella con un filo d'olio, saltate le punte per 4 minuti con un pizzico di sale. Tenetele da parte per la decorazione.\n2. Tostatura e Cottura: In una casseruola, fate appassire lo scalogno tritato finemente con un cucchiaio d'olio. Aggiungete il riso e tostatelo a fuoco medio-alto per 2 minuti, finché i chicchi non saranno caldi e lucidi. Versate il vino bianco e lasciatelo evaporare completamente. Iniziate ad aggiungere il brodo bollente un mestolo alla volta. Dopo 5 minuti, unite le rondelle dei gambi.\n3. Inserimento dello Zafferano: A 3 minuti dalla fine del tempo di cottura indicato sulla confezione, sciogliete lo zafferano in un po' di brodo e versatelo nel riso. Mescolate bene per uniformare il colore oro.\n4. Mantecatura Professionale: Spegnete il fuoco quando il riso è ancora al dente e leggermente fluido (\"all'onda\"). Versate l'olio EVO rimasto (e il lievito alimentare se lo usate). Mescolate energicamente con un cucchiaio di legno per 1 minuto. Il movimento creerà la cremina tipica del risotto. Lasciate riposare coperto per 2 minuti prima di servire.\n5. Impiattamento: Disponete il riso nei piatti. Adagiate sopra le punte di asparagi croccanti. Completate con una macinata di pepe nero e una grattugiata leggera di scorza di limone fresca.",
+    "time": 35,
+    "difficulty": "Media",
+    "servings": "5",
+    "tags": [
+      "risotto",
+      "asparagi",
+      "zafferano",
+      "vegetariano",
+      "primo piatto"
+    ],
+    "notes": "Il lievito alimentare in scaglie è opzionale e serve per una nota sapida. Per il limone, utilizzare solo la scorza per la finitura.",
+    "id": 32
   }
 ]
