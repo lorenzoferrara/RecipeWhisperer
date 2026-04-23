@@ -1812,5 +1812,67 @@
     ],
     "notes": "Il lievito alimentare in scaglie è opzionale e serve per una nota sapida. Per il limone, utilizzare solo la scorza per la finitura.",
     "id": 32
+  },
+  {
+    "name": "Hummus di ceci",
+    "code": "hummus_di_ceci",
+    "type": "Antipasto",
+    "cuisine": "Mediorientale",
+    "ingredients": [
+      {
+        "name": "Ceci precotti",
+        "amount": 230,
+        "unit": "g"
+      },
+      {
+        "name": "Tahina",
+        "amount": 2.5,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "Limone",
+        "amount": 0.5,
+        "unit": "n"
+      },
+      {
+        "name": "Acqua ghiacciata",
+        "amount": 1.5,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Aglio",
+        "amount": 0.5,
+        "unit": "spicchio"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Cumino",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Olio EVO",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Emulsione: Frullare la tahina con il succo di mezzo limone fino a ottenere una crema liscia e chiara.\n2. Base: Aggiungere l'aglio e i ceci (precedentemente sciacquati), continuando a frullare.\n3. Ottimizzazione: Versare l'acqua ghiacciata a filo per stabilizzare l'emulsione e rendere la texture spumosa.\n4. Servizio: Regolare di sale e cumino, completando con olio EVO prima di servire.",
+    "time": 15,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "vegano",
+      "vegetariano",
+      "senza glutine",
+      "mediorientale",
+      "dip",
+      "crema"
+    ],
+    "notes": "I ceci devono essere sciacquati accuratamente prima dell'uso.",
+    "id": 33
   }
 ]
