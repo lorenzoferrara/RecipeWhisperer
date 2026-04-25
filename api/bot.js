@@ -214,37 +214,66 @@ Ricetta da convertire:
 ${recipeText}
 `;
 
-  const response = await fetch(
-    'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-goog-api-key': GEMINI_API_KEY,
-      },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.1 }
-      })
+  // Try with gemini-2.5-flash up to 3 times, then fall back to gemini-2.5-flash-lite
+  const MAX_RETRIES = 2;
+  const RETRY_DELAY_MS = 2000;
+
+  for (let modelAttempt = 0; modelAttempt < 2; modelAttempt++) {
+    const model = modelAttempt === 0 ? 'gemini-2.5-flash' : 'gemini-2.5-flash-lite';
+    
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-goog-api-key': GEMINI_API_KEY,
+            },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: { temperature: 0.1 }
+            })
+          }
+        );
+
+        if (!response.ok) {
+          const err = await response.text();
+          throw new Error(`Gemini error: ${response.status} — ${err}`);
+        }
+
+        const data = await response.json();
+        const raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+
+        // Strip any accidental markdown fences
+        const cleaned = raw.replace(/```json|```/g, '').trim();
+
+        try {
+          const parsed = JSON.parse(cleaned);
+          return normalizeRecipe(parsed);
+        } catch {
+          throw new Error(`Gemini ha restituito JSON non valido:\n${cleaned}`);
+        }
+      } catch (err) {
+        const isLastRetry = attempt === MAX_RETRIES;
+        const isLastModel = modelAttempt === 1;
+
+        if (isLastRetry && isLastModel) {
+          // All retries exhausted, throw error
+          throw err;
+        }
+
+        if (!isLastRetry) {
+          // Retry with same model after delay
+          console.warn(`Attempt ${attempt + 1} failed for ${model}, retrying in ${RETRY_DELAY_MS}ms...`);
+          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS));
+        } else if (modelAttempt === 0) {
+          // All retries for gemini-2.5-flash exhausted, fall back to lite model
+          console.warn(`${model} failed after ${MAX_RETRIES + 1} attempts, falling back to gemini-2.5-flash-lite...`);
+        }
+      }
     }
-  );
-
-  if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`Gemini error: ${err}`);
-  }
-
-  const data = await response.json();
-  const raw  = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-
-  // Strip any accidental markdown fences
-  const cleaned = raw.replace(/```json|```/g, '').trim();
-
-  try {
-    const parsed = JSON.parse(cleaned);
-    return normalizeRecipe(parsed);
-  } catch {
-    throw new Error(`Gemini ha restituito JSON non valido:\n${cleaned}`);
   }
 }
 
