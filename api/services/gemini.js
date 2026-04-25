@@ -26,6 +26,12 @@ Il JSON deve avere esattamente questa struttura:
   "notes": "eventuali note aggiuntive, varianti, suggerimenti o informazioni extra sulla ricetta (stringa vuota se non presenti)"
 }
 
+REQUISITI CAMPO "name":
+Il nome deve riflettere esclusivamente l'unione dei componenti principali e della tecnica. Escludi qualsiasi informazione non essenziale:
+- Riferimenti dietetici/salutistici (es. Low Carb, Senza Glutine).
+- Note parentetiche su ingredienti minori.
+- Aggettivazione soggettiva o narrativa (es. Classico, Fantastico, Della Nonna).
+
 Unità di misura valide per "unit": g, kg, ml, l, n, pizzico, cucchiaio, cucchiai, cucchiaino, cucchiaini, fette, foglie, spicchi, cm.
 Usa "n" per elementi contabili senza unità (es. 2 uova → amount: 2, unit: "n").
 Non usare mai amount: 0. Se una quantità non è numerica (es. sale, pepe, olio), usa amount: 1 e unit: "pizzico".

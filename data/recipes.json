@@ -54,7 +54,7 @@
     "code": "pollo_al_lime_e_riso_venere"
   },
   {
-    "name": "Salmone in Crosta di Erbe e Asparagi (Low Carb)",
+    "name": "Salmone in Crosta di Erbe e Asparagi",
     "type": "Secondo",
     "cuisine": "Mediterranea",
     "ingredients": [
@@ -119,7 +119,7 @@
     "code": "salmone_in_crosta_di_erbe"
   },
   {
-    "name": "Chili Classico di Manzo, Fagioli Neri e Quinoa",
+    "name": "Chili di Manzo, Fagioli Neri e Quinoa",
     "type": "Secondo",
     "cuisine": "Moderna",
     "ingredients": [
@@ -190,7 +190,7 @@
     "code": "chili_classico_di_manzo_fagioli"
   },
   {
-    "name": "Tempeh al Miso e \"Cloud Scramble\" di Albumi (Low Carb)",
+    "name": "Tempeh al Miso e Scramble di Albumi",
     "type": "Secondo",
     "cuisine": "Asiatica",
     "ingredients": [
@@ -378,7 +378,7 @@
     "code": "anatra_in_umido_al_vino_rosso"
   },
   {
-    "name": "Stinco di Maiale Glassato con Rosmarino e Senape + Verdure Arrosto",
+    "name": "Stinco di Maiale Glassato e Verdure Arrosto",
     "type": "Secondo",
     "cuisine": "Moderna",
     "ingredients": [
@@ -449,7 +449,7 @@
     "code": "stinco_di_maiale_glassato"
   },
   {
-    "name": "Pollo Cremoso al Limone e Parmigiano con Spinaci Saltati",
+    "name": "Pollo Cremoso al Limone con Spinaci Saltati",
     "type": "Secondo",
     "cuisine": "Moderna",
     "ingredients": [
@@ -514,7 +514,7 @@
     "code": "pollo_cremoso_al_limone"
   },
   {
-    "name": "Salmone con Burro alle Erbe e Aglio + Fagiolini Croccanti",
+    "name": "Salmone alle Erbe con Fagiolini Croccanti",
     "type": "Secondo",
     "cuisine": "Moderna",
     "ingredients": [
@@ -642,7 +642,7 @@
     "code": "pasta_alla_norma"
   },
   {
-    "name": "Torta allo yogurt bianco (con 1 uovo)",
+    "name": "Torta allo yogurt",
     "type": "Dolce",
     "cuisine": "Moderna",
     "ingredients": [
@@ -885,7 +885,7 @@
     "id": 21
   },
   {
-    "name": "Salmone Mediterraneo con Spinaci e Olive, Pomodorini e Orzo",
+    "name": "Salmone Mediterraneo con Orzo, Olive e Pomodorini",
     "code": "salmone_mediterraneo_spinaci_orzo",
     "type": "Secondo",
     "cuisine": "Mediterranea",
@@ -956,7 +956,7 @@
     "id": 22
   },
   {
-    "name": "Spiedini di Manzo al Rosmarino con Zucca Arrosto e Salsa allo Yogurt e Aglio",
+    "name": "Spiedini di Manzo con Zucca Arrosto",
     "code": "spiedini_manzo_rosmarino_zucca",
     "type": "Secondo",
     "cuisine": "Moderna",
@@ -1238,7 +1238,7 @@
     "id": 26
   },
   {
-    "name": "Quiche alle Patate, Melanzane e Pancetta Affumicata",
+    "name": "Quiche alle Patate, Melanzane e Pancetta",
     "code": "quiche_patate_melanzane_pancetta_affumicata",
     "type": "Antipasto",
     "cuisine": "Francese",
@@ -1408,7 +1408,7 @@
     "id": 28
   },
   {
-    "name": "Tacos “al pastor” con stinco",
+    "name": "Tacos al pastor con stinco",
     "code": "tacos_al_pastor_con_stinco",
     "type": "Secondo",
     "cuisine": "Messicana",
@@ -1555,7 +1555,7 @@
     "id": 29
   },
   {
-    "name": "Vellutata di Funghi e Patate con Pancetta, Crostini e Prezzemolo",
+    "name": "Vellutata di Funghi e Patate con Pancetta e Crostini",
     "code": "vellutata_funghi_patate_pancetta",
     "type": "Zuppa",
     "cuisine": "Italiana",
@@ -1876,7 +1876,7 @@
     "id": 33
   },
   {
-    "name": "Pancake Classici della Nonna",
+    "name": "Pancake Classici",
     "code": "pancake_classici_della_nonna",
     "type": "Colazione",
     "cuisine": "Americana",
