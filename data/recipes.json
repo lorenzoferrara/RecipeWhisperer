@@ -1929,5 +1929,60 @@
     ],
     "notes": "Questa ricetta tradizionale produce pancake soffici e consistenti, ideali per la colazione. Servire immediatamente con sciroppo d'acero, miele o frutta fresca.",
     "id": 34
+  },
+  {
+    "name": "Pancake Classici della Nonna",
+    "code": "pancake_classici_della_nonna",
+    "type": "Colazione",
+    "cuisine": "Italiana",
+    "ingredients": [
+      {
+        "name": "Farina 00",
+        "amount": 190,
+        "unit": "g"
+      },
+      {
+        "name": "Lievito per dolci",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Zucchero semolato",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "Sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "Latte intero",
+        "amount": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "Burro fuso",
+        "amount": 45,
+        "unit": "g"
+      },
+      {
+        "name": "Uovo",
+        "amount": 1,
+        "unit": "n"
+      }
+    ],
+    "instructions": "1. Preparazione degli ingredienti: Pesare e preparare tutti gli ingredienti necessari.\n2. Miscelazione dei secchi: In una ciotola capiente, setacciare la farina insieme al lievito, allo zucchero e al sale.\n3. Unione dei liquidi: Creare un foro al centro degli ingredienti secchi (una \"fontana\") e versarvi il latte, il burro fuso e l'uovo. Mescolare con una frusta fino a ottenere un composto liscio e privo di grumi.\n4. Cottura: Scaldare una piastra o una padella antiaderente leggermente unta d'olio su fuoco medio-alto. Versare circa 60 ml di pastella (un mestolino piccolo) per ogni pancake.\n5. Prima fase di cottura: Cuocere finché non compaiono bollicine sulla superficie e i bordi iniziano ad apparire asciutti (circa 2-3 minuti).\n6. Seconda fase di cottura: Girare il pancake e cuocere finché anche l'altro lato non risulterà dorato. Ripetere l'operazione fino a esaurimento della pastella.\n7. Servizio: Servire immediatamente con sciroppo d'acero, miele o frutta fresca.",
+    "time": 20,
+    "difficulty": "Facile",
+    "servings": 4,
+    "tags": [
+      "Pancake",
+      "Colazione",
+      "Tradizionale",
+      "Soffici"
+    ],
+    "notes": "Questa ricetta tradizionale produce pancake soffici e consistenti, ideali per la colazione. Le unità di misura sono convertite nel sistema metrico decimale e adattate per la cucina italiana. Servire con sciroppo d'acero, miele o frutta fresca.",
+    "id": 35
   }
 ]
