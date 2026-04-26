@@ -1929,5 +1929,77 @@
     ],
     "notes": "Questa ricetta tradizionale produce pancake soffici e consistenti, ideali per la colazione. Servire immediatamente con sciroppo d'acero, miele o frutta fresca.",
     "id": 34
+  },
+  {
+    "name": "Riso, Carne Macinata e Fagioli",
+    "code": "riso_carne_fagioli",
+    "type": "Secondo",
+    "cuisine": "Moderna",
+    "ingredients": [
+      {
+        "name": "riso",
+        "amount": 160,
+        "unit": "g"
+      },
+      {
+        "name": "carne macinata di vitello",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "fagioli",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "scalogno",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "prezzemolo fresco",
+        "amount": 1,
+        "unit": "n"
+      },
+      {
+        "name": "cumino",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "paprika dolce",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "sale",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "pepe nero",
+        "amount": 1,
+        "unit": "pizzico"
+      },
+      {
+        "name": "olio extravergine d'oliva",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Preparazione del Riso: Cuocere il riso per assorbimento in acqua salata (rapporto 1:2). Una volta assorbita tutta l'acqua, spegnere la fiamma e lasciare riposare con il coperchio per 5 minuti. Sgranare i chicchi con una forchetta per ottenere una base leggera e non collosa.\n2. Il Fondo Speziato (Blooming): In una padella capiente, soffriggere lo scalogno tritato finemente con un giro d'olio extravergine. Quando lo scalogno diventa trasparente, aggiungere il cumino e la paprika. Lasciare tostare le spezie per circa 30 secondi: il calore dell'olio attiverà i profumi senza bruciarli.\n3. Rosolatura della Carne e Fagioli: Aggiungere la carne macinata di vitello. Alzare la fiamma e sgranarla bene. Portare a cottura finché la carne non risulta ben brunita e croccante. A questo punto, regolare di sale e abbondante pepe nero macinato al momento. Unire i fagioli (scolati e sciacquati). Saltare il tutto a fuoco medio per 4-5 minuti, permettendo ai sapori di amalgamarsi perfettamente. Se il composto appare troppo asciutto, aggiungere un cucchiaio di acqua di cottura del riso.\n4. Finitura e Aromi: Spegnere il fuoco. Aggiungere il prezzemolo fresco tritato finemente. Mescolare con cura affinché il calore residuo sprigioni gli oli essenziali dell'erba senza cuocerla.",
+    "time": 35,
+    "difficulty": "Media",
+    "servings": 2,
+    "tags": [
+      "riso",
+      "carne",
+      "vitello",
+      "fagioli",
+      "spezie",
+      "piatto unico"
+    ],
+    "notes": "La ricetta si concentra sulla purezza e sulla consistenza della base calda, con contrasto dato da scalogno e prezzemolo. È un piatto essenziale e tecnico, focalizzato sulla qualità della rosolatura del vitello e sull'equilibrio aromatico delle spezie. Per il riso si possono usare Basmati o Long Grain; per i fagioli, neri o rossi, già cotti.",
+    "id": 35
   }
 ]
