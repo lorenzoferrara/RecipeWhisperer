@@ -2001,5 +2001,103 @@
     ],
     "notes": "La ricetta si concentra sulla purezza e sulla consistenza della base calda, con contrasto dato da scalogno e prezzemolo. È un piatto essenziale e tecnico, focalizzato sulla qualità della rosolatura del vitello e sull'equilibrio aromatico delle spezie. Per il riso si possono usare Basmati o Long Grain; per i fagioli, neri o rossi, già cotti.",
     "id": 35
+  },
+  {
+    "name": "Ramen con Lonza di Maiale Brasata",
+    "code": "ramen_lonza_maiale_brasata",
+    "type": "Zuppa",
+    "cuisine": "Giapponese",
+    "ingredients": [
+      {
+        "name": "lonza di maiale",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "name": "salsa di soia",
+        "amount": 4,
+        "unit": "cucchiai"
+      },
+      {
+        "name": "miso bianco",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "olio di sesamo",
+        "amount": 1,
+        "unit": "cucchiaio"
+      },
+      {
+        "name": "miele",
+        "amount": 1,
+        "unit": "cucchiaino"
+      },
+      {
+        "name": "aglio",
+        "amount": 2,
+        "unit": "spicchi"
+      },
+      {
+        "name": "zenzero",
+        "amount": 2,
+        "unit": "cm"
+      },
+      {
+        "name": "acqua",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "name": "noodles",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "brodo di pollo",
+        "amount": 1,
+        "unit": "l"
+      },
+      {
+        "name": "funghi champignon o shiitake",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "uova",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "cipollotti",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "spinaci freschi",
+        "amount": 2,
+        "unit": "n"
+      },
+      {
+        "name": "alga nori",
+        "amount": 1,
+        "unit": "pizzico"
+      }
+    ],
+    "instructions": "1. Cuoci le uova: Immergile in acqua bollente per 6 minuti e 30 secondi. Raffreddale subito in acqua fredda, sgusciale e tienile da parte.\n2. Prepara la lonza: In una padella ampia o casseruola, unisci salsa di soia, miso, olio di sesamo, miele, aglio, zenzero e acqua. Mescola bene a fuoco basso finché il miso si scioglie completamente.\n3. Cuoci la carne: Adagia la lonza intera nella salsa. Porta a leggero bollore, copri con un coperchio e cuoci a fuoco molto basso per 25-30 minuti, girandola ogni 8-10 minuti. Negli ultimi 5 minuti togli il coperchio e lascia restringere leggermente il fondo. Una volta cotta, lasciala riposare 5 minuti, poi affettala sottilmente.\n4. Prepara il brodo: Scalda il brodo di pollo in una pentola. Aggiungi un cucchiaio del fondo di cottura della carne per renderlo ancora più saporito.\n5. Cuoci i funghi: Saltali in padella con un filo d'olio per 4-5 minuti.\n6. Cuoci i noodles: Lessali secondo le indicazioni della confezione.\n7. Assembla: Dividi i noodles nelle ciotole. Versa il brodo caldo. Disponi sopra lonza affettata, funghi, spinaci, uova tagliate a metà e cipollotto affettato. Irrora con un cucchiaio della salsa di cottura della carne.",
+    "time": 75,
+    "difficulty": "Media",
+    "servings": 2,
+    "tags": [
+      "ramen",
+      "maiale",
+      "lonza",
+      "giapponese",
+      "zuppa",
+      "noodles",
+      "brasato"
+    ],
+    "notes": "Cuocere la lonza direttamente nella salsa è un'ottima idea: rimane più tenera, più saporita e praticamente si condisce da sola. Se vuoi una carne ancora più morbida, puoi prolungare la cottura fino a 40 minuti aggiungendo poca acqua se necessario. La lonza ti ringrazierà.",
+    "id": 36
   }
 ]
